@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="SEGMENTS — an evolving publication of unbuilt architecture by Andre Vasconcelos.">
+<title>SEGMENTS — Andre Vasconcelos</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <a href="#top" class="wordmark">SEGMENTS</a>
+  <nav><a href="#archive">Archive</a><a href="#prologue">Prologue</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <p class="author">Andre Vasconcelos</p>
+  <h1>SEGMENTS</h1>
+  <p class="strap">CRITICAL ARCHITECTURE — SPECULATIVE INFRASTRUCTURE — DEFINITIVE VISIONS</p>
+</section>
+
+<section id="archive" class="archive">
+  <div class="section-head"><span>Archive</span><span id="count"></span></div>
+  <div id="gallery" class="gallery"></div>
+</section>
+
+<section id="prologue" class="prologue">
+  <p class="eyebrow">Prologue</p>
+  <p class="lead">SEGMENTS is conceived as an archive of investigations—an evolving body of work exploring infrastructure, landscape, mobility, and the philosophical dimensions of the built environment. Each work is a fragment of a larger inquiry into how architecture can respond to the realities of the present while revealing those yet to come.</p>
+  <div class="manifesto">
+    <p>Architecture is not the production of objects. It is the construction of consequences.</p>
+    <p>The built environment records conflict, scarcity, ambition, and hope. War, poverty, and economic systems become spatial before they become visible. Waste space and wasteland are not voids, but territories whose potential has not yet been articulated.</p>
+    <p>Geometry offers order; amusement and discovery preserve uncertainty. Transport is physical, mental, and civic. Every threshold is both portal and proposition—a gate between what exists and what might.</p>
+  </div>
+  <p class="closing">ARCHITECTURE IS THE PROJECT</p>
+</section>
+
+<section id="contact" class="contact">
+  <p>Andre Vasconcelos</p>
+  <a href="mailto:andreread@hotmail.com">andreread@hotmail.com</a>
+</section>
+</main>
+
+<footer>
+  <img src="assets/logo.png" alt="Andre Vasconcelos initials mark">
+  <p>SEGMENTS continues.</p>
+</footer>
+
+<dialog id="viewer">
+  <button id="close" aria-label="Close">×</button>
+  <button id="prev" class="nav prev" aria-label="Previous">←</button>
+  <div class="modal-inner">
+    <img id="modalImage" alt="">
+    <div class="modal-copy">
+      <p id="modalNumber" class="number"></p>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription" class="description"></p>
+      <div class="fragment"><span>Critical Fragment</span><p id="modalFragment"></p></div>
+    </div>
+  </div>
+  <button id="next" class="nav next" aria-label="Next">→</button>
+</dialog>
+
+<script src="works.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
