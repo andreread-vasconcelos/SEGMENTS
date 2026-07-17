@@ -1,188 +1,170 @@
 const works = [
   {
     "title": "Infrastructural Threshold",
-    "description": "A layered civic structure occupies the air above metropolitan movement, transforming a transport corridor into inhabitable territory.",
+    "description": "A layered structure occupies the air above metropolitan movement, converting a transport corridor into inhabitable civic territory.",
     "fragment": "The city begins where circulation learns to dwell.",
     "src": "assets/images/01-infrastructural-threshold.webp"
   },
   {
-    "title": "Urban Viaduct",
-    "description": "A continuous frame spans road and rail, joining circulation, occupation, and public life within one sectional datum.",
-    "fragment": "A span becomes territory when movement acquires depth.",
-    "src": "assets/images/02-urban-viaduct.webp"
-  },
-  {
-    "title": "Transit Cathedral",
-    "description": "Infrastructure acquires monumentality through a vaulted structural order where mobility becomes collective ritual.",
-    "fragment": "Velocity seeks its own cathedral.",
-    "src": "assets/images/03-transit-cathedral.webp"
+    "title": "Linear Habitat",
+    "description": "A continuous elevated frame proposes the city as an interior stretched across existing infrastructure.",
+    "fragment": "Continuity becomes architecture when it can be inhabited.",
+    "src": "assets/images/02-linear-habitat.webp"
   },
   {
     "title": "Sectional Metropolis",
-    "description": "Program, circulation, and void are compressed into a dense vertical section that behaves as an urban organism.",
+    "description": "Program, circulation, and structure are compressed into a dense urban section.",
     "fragment": "The section is the city thinking vertically.",
-    "src": "assets/images/04-sectional-metropolis.webp"
+    "src": "assets/images/03-sectional-metropolis.webp"
   },
   {
-    "title": "Aerial Trajectory",
-    "description": "Architecture organizes trajectories rather than parcels, making movement itself the primary generator of form.",
-    "fragment": "Topology replaces geography; trajectory becomes place.",
-    "src": "assets/images/05-aerial-trajectory.webp"
-  },
-  {
-    "title": "Civic Machine",
-    "description": "An exposed structural machine converts residual urban space into a legible civic interior.",
-    "fragment": "The machine becomes civic when its structure is shared.",
-    "src": "assets/images/06-civic-machine.webp"
-  },
-  {
-    "title": "Speculative Horizon",
-    "description": "A speculative horizon where structure, mobility, and inhabitation remain deliberately unresolved.",
-    "fragment": "The future appears first as an unresolved edge.",
-    "src": "assets/images/07-speculative-horizon.webp"
-  },
-  {
-    "title": "Linear Habitat",
-    "description": "A long inhabited beam proposes the city as a continuous interior suspended above existing systems.",
-    "fragment": "Continuity is not repetition, but inhabitable duration.",
-    "src": "assets/images/08-linear-habitat.webp"
+    "title": "Transit Field",
+    "description": "Rail, road, and public occupation converge within one metropolitan field.",
+    "fragment": "Movement gives the field its order.",
+    "src": "assets/images/04-transit-field.webp"
   },
   {
     "title": "Metropolitan Span",
-    "description": "Rail, road, and public occupation converge within a singular metropolitan cross-section.",
-    "fragment": "Infrastructure becomes public when systems are allowed to meet.",
-    "src": "assets/images/09-metropolitan-span.webp"
+    "description": "A long-span civic structure establishes a new layer without erasing the city below.",
+    "fragment": "The horizon is constructed before it is occupied.",
+    "src": "assets/images/05-metropolitan-span.webp"
   },
   {
-    "title": "The Civic Viaduct",
-    "description": "A disciplined megastructure establishes a new urban layer while retaining the distant city as context.",
-    "fragment": "The horizon is constructed before it is occupied.",
-    "src": "assets/images/10-the-civic-viaduct.webp"
+    "title": "Civic Vault",
+    "description": "Engineering becomes spatial order through a monumental inhabited underside.",
+    "fragment": "A vault can shelter motion as well as memory.",
+    "src": "assets/images/06-civic-vault.webp"
   },
   {
     "title": "Cathedral Infrastructure",
-    "description": "The underside becomes an inhabited vault: engineering is recast as civic space.",
-    "fragment": "The vault no longer shelters faith, but collective motion.",
-    "src": "assets/images/11-cathedral-infrastructure.webp"
+    "description": "The infrastructure is treated as a civic interior rather than a neutral conduit.",
+    "fragment": "Infrastructure becomes civic when systems are shared.",
+    "src": "assets/images/07-cathedral-infrastructure.webp"
   },
   {
-    "title": "Vertical Field",
-    "description": "A rational frame receives multiple scales of occupation, turning the tower into a vertical territory.",
-    "fragment": "Height is a social condition before it is a dimension.",
-    "src": "assets/images/12-vertical-field.webp"
+    "title": "Continuous Territory",
+    "description": "Linear occupation expands and contracts along the movement corridor.",
+    "fragment": "Duration replaces the isolated object.",
+    "src": "assets/images/08-continuous-territory.webp"
   },
   {
-    "title": "Tectonic Tower",
-    "description": "Structure and enclosure are separated so that load, circulation, and inhabitation remain visibly distinct.",
-    "fragment": "Tectonics is truth made visible through load.",
-    "src": "assets/images/13-tectonic-tower.webp"
+    "title": "Urban Viaduct",
+    "description": "A disciplined frame bridges transport systems while retaining structural legibility.",
+    "fragment": "A span becomes territory when it acquires depth.",
+    "src": "assets/images/09-urban-viaduct.webp"
   },
   {
-    "title": "Fluid Monument",
-    "description": "A fluid envelope negotiates with a rigorous internal armature, balancing deformation and order.",
-    "fragment": "Form becomes free only when structure remains intelligible.",
-    "src": "assets/images/14-fluid-monument.webp"
+    "title": "Exposed Frame",
+    "description": "Load, circulation, and occupation remain visible as distinct architectural systems.",
+    "fragment": "Tectonics becomes visible through consequence.",
+    "src": "assets/images/10-exposed-frame.webp"
   },
   {
-    "title": "Park as Counterform",
-    "description": "Landscape acts as a restorative field around monumental architectural figures.",
-    "fragment": "Ground is not background; it is the first architecture.",
-    "src": "assets/images/15-park-as-counterform.webp"
+    "title": "Inhabited Beam",
+    "description": "The building behaves less as an object than as a continuous inhabited beam.",
+    "fragment": "The beam is no longer merely structural.",
+    "src": "assets/images/11-inhabited-beam.webp"
   },
   {
-    "title": "Residual Ground",
-    "description": "Wasteland is treated as latent territory, awaiting another social and spatial purpose.",
-    "fragment": "Waste is matter awaiting another ontology.",
-    "src": "assets/images/16-residual-ground.webp"
+    "title": "Threshold Study",
+    "description": "A central gateway reorganizes movement through a monumental public threshold.",
+    "fragment": "A gate organizes more than passage.",
+    "src": "assets/images/12-threshold-study.webp"
   },
   {
-    "title": "Urban Constellation",
-    "description": "A family of urban objects is composed as a field of relationships rather than isolated icons.",
-    "fragment": "The whole emerges through relations among fragments.",
-    "src": "assets/images/17-urban-constellation.webp"
+    "title": "Civic Gate",
+    "description": "Architecture marks passage without resolving the condition around it.",
+    "fragment": "Thresholds remain open questions.",
+    "src": "assets/images/13-civic-gate.webp"
   },
   {
-    "title": "Launch Territory",
-    "description": "The launch complex is understood as territory: approach, service, spectatorship, and departure are one sequence.",
-    "fragment": "Departure begins long before ignition.",
-    "src": "assets/images/18-launch-territory.webp"
+    "title": "Ground Studies",
+    "description": "Plans examine how civic, residential, and landscaped fields can share the same urban ground.",
+    "fragment": "Ground is the first architecture.",
+    "src": "assets/images/14-ground-studies.webp"
+  },
+  {
+    "title": "Landscape Studies",
+    "description": "Landscape softens monumental form and gives the investigations a restorative counterfield.",
+    "fragment": "Landscape restores distance to monumentality.",
+    "src": "assets/images/15-landscape-studies.webp"
+  },
+  {
+    "title": "Lakeside Dwelling I",
+    "description": "A low glass dwelling extends from the rocky shoreline beneath a folded butterfly roof, joining interior life to the mountain horizon.",
+    "fragment": "The dwelling rests where roof, rock, and distance meet.",
+    "src": "assets/images/16a-dwelling-1.webp"
+  },
+  {
+    "title": "Lakeside Dwelling II",
+    "description": "The reverse view reveals the same house as a suspended horizontal room, open to water, forest, and the distant ridge.",
+    "fragment": "Transparency gives the landscape an interior edge.",
+    "src": "assets/images/16b-dwelling-2.webp"
+  },
+  {
+    "title": "Cliff Dwelling",
+    "description": "A glazed residence is anchored into the mountain face above water and falls, its cantilever balanced by stone, structure, and vertical access.",
+    "fragment": "Between stone and air, habitation becomes a threshold.",
+    "src": "assets/images/16c-dwelling-3.webp"
+  },
+  {
+    "title": "Vertical Territories",
+    "description": "Tower studies alternate between rational frames and fluid structural envelopes.",
+    "fragment": "Height is a territory before it is a dimension.",
+    "src": "assets/images/16-vertical-territories.webp"
+  },
+  {
+    "title": "Launch Portal",
+    "description": "The launch structure becomes a portal measured against both the body and the sky.",
+    "fragment": "Departure begins before ignition.",
+    "src": "assets/images/17-launch-portal.webp"
+  },
+  {
+    "title": "Launch Armature",
+    "description": "Support, access, and release are composed as one vertical armature.",
+    "fragment": "Force writes the first line of the structure.",
+    "src": "assets/images/18-launch-armature.webp"
   },
   {
     "title": "Suspended Departure",
-    "description": "The rocket is held away from the tower, making suspension and release the central architectural event.",
-    "fragment": "Suspension is the instant when gravity becomes negotiable.",
+    "description": "The rocket is held away from the tower, making suspension the central architectural event.",
+    "fragment": "Suspension makes gravity negotiable.",
     "src": "assets/images/19-suspended-departure.webp"
   },
   {
     "title": "Orbital Gantry",
-    "description": "A civic-scale gantry frames ascent while exposing the mechanics that make departure possible.",
-    "fragment": "The sublime is engineered through scale and anticipation.",
+    "description": "The vehicle temporarily inhabits the structure before its departure.",
+    "fragment": "Architecture prepares the object for its absence.",
     "src": "assets/images/20-orbital-gantry.webp"
   },
   {
-    "title": "Rocket and Frame",
-    "description": "The vehicle inhabits the architecture temporarily; the structure exists to prepare its disappearance.",
-    "fragment": "Architecture prepares the object for its own absence.",
-    "src": "assets/images/21-rocket-and-frame.webp"
+    "title": "Aerospace Frame",
+    "description": "Aerospace infrastructure is framed as civic architecture rather than isolated machinery.",
+    "fragment": "The machine becomes public through occupation.",
+    "src": "assets/images/21-aerospace-frame.webp"
   },
   {
-    "title": "Mechanical Threshold",
-    "description": "Articulated arms transform support into choreography, staging the threshold between gravity and flight.",
-    "fragment": "A joint becomes philosophy when it stages release.",
-    "src": "assets/images/22-mechanical-threshold.webp"
-  },
-  {
-    "title": "Spaceport Section",
-    "description": "Section reveals the coexistence of service decks, circulation, observation, and propulsion infrastructure.",
-    "fragment": "The section discloses what the image conceals.",
-    "src": "assets/images/23-spaceport-section.webp"
-  },
-  {
-    "title": "Launch Armature",
-    "description": "The tower becomes an armature of forces rather than a conventional enclosure.",
-    "fragment": "Force writes the first line of every architecture.",
-    "src": "assets/images/24-launch-armature.webp"
-  },
-  {
-    "title": "Departure Chamber",
-    "description": "Interior space is organized around anticipation, with the rocket visible as a temporary monumental presence.",
-    "fragment": "A portal is an interior organized around elsewhere.",
-    "src": "assets/images/25-departure-chamber.webp"
-  },
-  {
-    "title": "Aerospace Cloister",
-    "description": "Aerospace infrastructure becomes cloister-like: repetitive structure frames contemplation before motion.",
-    "fragment": "Repetition becomes contemplative at the edge of the machine.",
-    "src": "assets/images/26-aerospace-cloister.webp"
-  },
-  {
-    "title": "Vertical Portal",
-    "description": "The launch tower operates as a portal whose scale is measured against both the body and the sky.",
-    "fragment": "The gate measures the distance between earth and possibility.",
-    "src": "assets/images/27-vertical-portal.webp"
-  },
-  {
-    "title": "Launcher Study",
-    "description": "A compact study of support, access, and release, stripped to its essential tectonic logic.",
-    "fragment": "Precision is the poetry of necessary support.",
-    "src": "assets/images/28-launcher-study.webp"
+    "title": "Residual Territory",
+    "description": "A megastructure occupies residual territory above road and rail.",
+    "fragment": "Waste space is territory awaiting intention.",
+    "src": "assets/images/22-residual-territory.webp"
   },
   {
     "title": "Interior Horizon",
-    "description": "An interior prospect turns the rocket into a distant horizon and architecture into an instrument of waiting.",
+    "description": "The rocket becomes a distant horizon within a deep interior frame.",
     "fragment": "To wait is already to travel.",
-    "src": "assets/images/29-interior-horizon.webp"
+    "src": "assets/images/23-interior-horizon.webp"
   },
   {
     "title": "Ignition Hall",
-    "description": "Artificial light, structural depth, and framed machinery create a civic interior for extreme departure.",
-    "fragment": "Light gives the machine a civic interior.",
-    "src": "assets/images/30-ignition-hall.webp"
+    "description": "Artificial light and exposed structure prepare the interior for extreme departure.",
+    "fragment": "Light gives the machine an interior.",
+    "src": "assets/images/24-ignition-hall.webp"
   },
   {
     "title": "Departure",
-    "description": "The final image places motion ahead of object: architecture remains as the vessel from which departure occurs.",
+    "description": "Architecture remains as movement completes the scene.",
     "fragment": "Architecture remains; movement completes it.",
-    "src": "assets/images/31-departure.webp"
+    "src": "assets/images/25-departure.webp"
   }
 ];

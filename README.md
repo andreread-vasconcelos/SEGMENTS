@@ -1,19 +1,10 @@
-# SEGMENTS — Complete Website
+# SEGMENTS v1.2
 
-Open `index.html` in any modern web browser.
+Open `index.html` locally or publish the folder contents at the repository root with GitHub Pages.
 
-## Included
-- Minimal image-first archive
-- 31 works, with the final three color renders placed last
-- Click-to-expand full-screen viewer
-- Architectural descriptions and Critical Fragments
-- Prologue / thesis
-- Contact email: andreread@hotmail.com
-- Closing personal mark
-- Responsive layout
-- No installation or build process
-
-## Publish with GitHub Pages
-Upload every file and folder to the root of a public GitHub repository, then enable Pages from the `main` branch and `/ (root)` folder.
-
-MIT License.
+Updates:
+- Three new Dwellings added
+- Buy Me a Coffee support section integrated
+- Removed the earlier consequences line
+- Complete responsive CSS and JavaScript included
+- 28 investigations

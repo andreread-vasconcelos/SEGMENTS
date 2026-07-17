@@ -1,24 +1,6 @@
 
-const gallery=document.getElementById('gallery');
-const viewer=document.getElementById('viewer');
-let current=0;
-document.getElementById('count').textContent=`${works.length} fragments`;
-works.forEach((w,i)=>{
-  const b=document.createElement('button');
-  b.className='tile'; b.type='button';
-  b.innerHTML=`<img src="${w.src}" alt="${w.title}" loading="lazy"><span class="overlay"><span>${String(i+1).padStart(2,'0')}</span><strong>${w.title}</strong></span>`;
-  b.addEventListener('click',()=>openWork(i)); gallery.appendChild(b);
-});
-function render(){
-  const w=works[current];
-  modalImage.src=w.src; modalImage.alt=w.title;
-  modalNumber.textContent=`${String(current+1).padStart(2,'0')} / ${String(works.length).padStart(2,'0')}`;
-  modalTitle.textContent=w.title; modalDescription.textContent=w.description; modalFragment.textContent=w.fragment;
-}
-function openWork(i){current=i;render();viewer.showModal();document.body.style.overflow='hidden'}
-function closeViewer(){viewer.close();document.body.style.overflow=''}
-document.getElementById('close').onclick=closeViewer;
-document.getElementById('prev').onclick=()=>{current=(current-1+works.length)%works.length;render()};
-document.getElementById('next').onclick=()=>{current=(current+1)%works.length;render()};
-viewer.addEventListener('click',e=>{if(e.target===viewer)closeViewer()});
-window.addEventListener('keydown',e=>{if(!viewer.open)return;if(e.key==='ArrowLeft')prev.click();if(e.key==='ArrowRight')next.click();if(e.key==='Escape')closeViewer()});
+const gallery=document.getElementById('gallery');const count=document.getElementById('count');const viewer=document.getElementById('viewer');const modalImage=document.getElementById('modalImage');const modalTitle=document.getElementById('modalTitle');const modalDescription=document.getElementById('modalDescription');const modalFragment=document.getElementById('modalFragment');const modalNumber=document.getElementById('modalNumber');let current=0;
+count.textContent=`${works.length} investigations`;
+works.forEach((w,i)=>{const b=document.createElement('button');b.className='card';b.innerHTML=`<img src="${w.src}" alt="${w.title}" loading="lazy"><div class="card-meta"><span>${w.title}</span><span>${String(i+1).padStart(2,'0')}</span></div>`;b.addEventListener('click',()=>openViewer(i));gallery.appendChild(b)});
+function openViewer(i){current=(i+works.length)%works.length;const w=works[current];modalImage.src=w.src;modalImage.alt=w.title;modalTitle.textContent=w.title;modalDescription.textContent=w.description;modalFragment.textContent=w.fragment;modalNumber.textContent=`${String(current+1).padStart(2,'0')} / ${String(works.length).padStart(2,'0')}`;if(!viewer.open)viewer.showModal()}
+document.getElementById('close').onclick=()=>viewer.close();document.getElementById('prev').onclick=()=>openViewer(current-1);document.getElementById('next').onclick=()=>openViewer(current+1);viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});document.addEventListener('keydown',e=>{if(!viewer.open)return;if(e.key==='ArrowLeft')openViewer(current-1);if(e.key==='ArrowRight')openViewer(current+1);if(e.key==='Escape')viewer.close()});
