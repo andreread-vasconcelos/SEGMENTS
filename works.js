@@ -1,170 +1,450 @@
-const works = [
+window.SEGMENTS_WORKS = [
   {
-    "title": "Infrastructural Threshold",
-    "description": "A layered structure occupies the air above metropolitan movement, converting a transport corridor into inhabitable civic territory.",
-    "fragment": "The city begins where circulation learns to dwell.",
-    "src": "assets/images/01-infrastructural-threshold.webp"
-  },
-  {
+    "id": 1,
     "title": "Linear Habitat",
-    "description": "A continuous elevated frame proposes the city as an interior stretched across existing infrastructure.",
-    "fragment": "Continuity becomes architecture when it can be inhabited.",
-    "src": "assets/images/02-linear-habitat.webp"
+    "category": "infrastructure",
+    "image": "assets/images/investigation-01.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Sectional Metropolis",
-    "description": "Program, circulation, and structure are compressed into a dense urban section.",
-    "fragment": "The section is the city thinking vertically.",
-    "src": "assets/images/03-sectional-metropolis.webp"
+    "id": 2,
+    "title": "Civic Spine",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-02.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Transit Field",
-    "description": "Rail, road, and public occupation converge within one metropolitan field.",
-    "fragment": "Movement gives the field its order.",
-    "src": "assets/images/04-transit-field.webp"
+    "id": 3,
+    "title": "Suspended Exchange",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-03.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Metropolitan Span",
-    "description": "A long-span civic structure establishes a new layer without erasing the city below.",
-    "fragment": "The horizon is constructed before it is occupied.",
-    "src": "assets/images/05-metropolitan-span.webp"
+    "id": 4,
+    "title": "Metropolitan Threshold",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-04.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Civic Vault",
-    "description": "Engineering becomes spatial order through a monumental inhabited underside.",
-    "fragment": "A vault can shelter motion as well as memory.",
-    "src": "assets/images/06-civic-vault.webp"
+    "id": 5,
+    "title": "Transit Canopy",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-05.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Cathedral Infrastructure",
-    "description": "The infrastructure is treated as a civic interior rather than a neutral conduit.",
-    "fragment": "Infrastructure becomes civic when systems are shared.",
-    "src": "assets/images/07-cathedral-infrastructure.webp"
+    "id": 6,
+    "title": "Urban Confluence",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-06.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Continuous Territory",
-    "description": "Linear occupation expands and contracts along the movement corridor.",
-    "fragment": "Duration replaces the isolated object.",
-    "src": "assets/images/08-continuous-territory.webp"
+    "id": 7,
+    "title": "The Inhabited Viaduct",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-07.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Urban Viaduct",
-    "description": "A disciplined frame bridges transport systems while retaining structural legibility.",
-    "fragment": "A span becomes territory when it acquires depth.",
-    "src": "assets/images/09-urban-viaduct.webp"
+    "id": 8,
+    "title": "Parallel City",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-08.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Exposed Frame",
-    "description": "Load, circulation, and occupation remain visible as distinct architectural systems.",
-    "fragment": "Tectonics becomes visible through consequence.",
-    "src": "assets/images/10-exposed-frame.webp"
+    "id": 9,
+    "title": "Mobility Cathedral",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-09.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Inhabited Beam",
-    "description": "The building behaves less as an object than as a continuous inhabited beam.",
-    "fragment": "The beam is no longer merely structural.",
-    "src": "assets/images/11-inhabited-beam.webp"
+    "id": 10,
+    "title": "Public Strata",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-10.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Threshold Study",
-    "description": "A central gateway reorganizes movement through a monumental public threshold.",
-    "fragment": "A gate organizes more than passage.",
-    "src": "assets/images/12-threshold-study.webp"
+    "id": 11,
+    "title": "Ground of Movement",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-11.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Civic Gate",
-    "description": "Architecture marks passage without resolving the condition around it.",
-    "fragment": "Thresholds remain open questions.",
-    "src": "assets/images/13-civic-gate.webp"
+    "id": 12,
+    "title": "Mechanical Horizon",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-12.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Ground Studies",
-    "description": "Plans examine how civic, residential, and landscaped fields can share the same urban ground.",
-    "fragment": "Ground is the first architecture.",
-    "src": "assets/images/14-ground-studies.webp"
+    "id": 13,
+    "title": "Intermodal Commons",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-13.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Landscape Studies",
-    "description": "Landscape softens monumental form and gives the investigations a restorative counterfield.",
-    "fragment": "Landscape restores distance to monumentality.",
-    "src": "assets/images/15-landscape-studies.webp"
+    "id": 14,
+    "title": "Sinuous Territory",
+    "category": "infrastructure",
+    "image": "assets/images/investigation-14.png",
+    "description": "An investigation into architecture as connective tissue, where circulation, structure, and public life become a single continuous field. The proposal treats movement not as residual engineering, but as an inhabitable civic condition.",
+    "poem": "Lines carry bodies,\nstructure carries time.\nThe city moves through itself,\nand becomes common ground."
   },
   {
-    "title": "Lakeside Dwelling I",
-    "description": "A low glass dwelling extends from the rocky shoreline beneath a folded butterfly roof, joining interior life to the mountain horizon.",
-    "fragment": "The dwelling rests where roof, rock, and distance meet.",
-    "src": "assets/images/16a-dwelling-1.webp"
-  },
-  {
-    "title": "Lakeside Dwelling II",
-    "description": "The reverse view reveals the same house as a suspended horizontal room, open to water, forest, and the distant ridge.",
-    "fragment": "Transparency gives the landscape an interior edge.",
-    "src": "assets/images/16b-dwelling-2.webp"
-  },
-  {
+    "id": 15,
     "title": "Cliff Dwelling",
-    "description": "A glazed residence is anchored into the mountain face above water and falls, its cantilever balanced by stone, structure, and vertical access.",
-    "fragment": "Between stone and air, habitation becomes a threshold.",
-    "src": "assets/images/16c-dwelling-3.webp"
+    "category": "dwellings",
+    "image": "assets/images/investigation-15.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   },
   {
-    "title": "Vertical Territories",
-    "description": "Tower studies alternate between rational frames and fluid structural envelopes.",
-    "fragment": "Height is a territory before it is a dimension.",
-    "src": "assets/images/16-vertical-territories.webp"
+    "id": 16,
+    "title": "Waterfall House",
+    "category": "dwellings",
+    "image": "assets/images/investigation-16.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   },
   {
-    "title": "Launch Portal",
-    "description": "The launch structure becomes a portal measured against both the body and the sky.",
-    "fragment": "Departure begins before ignition.",
-    "src": "assets/images/17-launch-portal.webp"
+    "id": 17,
+    "title": "Glass Refuge",
+    "category": "dwellings",
+    "image": "assets/images/investigation-17.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   },
   {
-    "title": "Launch Armature",
-    "description": "Support, access, and release are composed as one vertical armature.",
-    "fragment": "Force writes the first line of the structure.",
-    "src": "assets/images/18-launch-armature.webp"
+    "id": 18,
+    "title": "Ocean Room",
+    "category": "dwellings",
+    "image": "assets/images/investigation-18.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   },
   {
-    "title": "Suspended Departure",
-    "description": "The rocket is held away from the tower, making suspension the central architectural event.",
-    "fragment": "Suspension makes gravity negotiable.",
-    "src": "assets/images/19-suspended-departure.webp"
+    "id": 19,
+    "title": "Forest Chamber",
+    "category": "dwellings",
+    "image": "assets/images/investigation-19.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   },
   {
-    "title": "Orbital Gantry",
-    "description": "The vehicle temporarily inhabits the structure before its departure.",
-    "fragment": "Architecture prepares the object for its absence.",
-    "src": "assets/images/20-orbital-gantry.webp"
+    "id": 20,
+    "title": "Cantilevered Retreat",
+    "category": "dwellings",
+    "image": "assets/images/investigation-20.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   },
   {
-    "title": "Aerospace Frame",
-    "description": "Aerospace infrastructure is framed as civic architecture rather than isolated machinery.",
-    "fragment": "The machine becomes public through occupation.",
-    "src": "assets/images/21-aerospace-frame.webp"
+    "id": 21,
+    "title": "House of the Horizon",
+    "category": "dwellings",
+    "image": "assets/images/investigation-21.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   },
   {
-    "title": "Residual Territory",
-    "description": "A megastructure occupies residual territory above road and rail.",
-    "fragment": "Waste space is territory awaiting intention.",
-    "src": "assets/images/22-residual-territory.webp"
+    "id": 22,
+    "title": "Submerged Habitat",
+    "category": "dwellings",
+    "image": "assets/images/investigation-22.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   },
   {
-    "title": "Interior Horizon",
-    "description": "The rocket becomes a distant horizon within a deep interior frame.",
-    "fragment": "To wait is already to travel.",
-    "src": "assets/images/23-interior-horizon.webp"
+    "id": 23,
+    "title": "Walking Vessel",
+    "category": "dwellings",
+    "image": "assets/images/investigation-23.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   },
   {
-    "title": "Ignition Hall",
-    "description": "Artificial light and exposed structure prepare the interior for extreme departure.",
-    "fragment": "Light gives the machine an interior.",
-    "src": "assets/images/24-ignition-hall.webp"
+    "id": 24,
+    "title": "Rock Observatory",
+    "category": "dwellings",
+    "image": "assets/images/investigation-24.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   },
   {
-    "title": "Departure",
-    "description": "Architecture remains as movement completes the scene.",
-    "fragment": "Architecture remains; movement completes it.",
-    "src": "assets/images/25-departure.webp"
+    "id": 25,
+    "title": "Lakeside Interval",
+    "category": "dwellings",
+    "image": "assets/images/investigation-25.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
+  },
+  {
+    "id": 26,
+    "title": "Butterfly House",
+    "category": "dwellings",
+    "image": "assets/images/investigation-26.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
+  },
+  {
+    "id": 27,
+    "title": "Vertical Sanctuary",
+    "category": "dwellings",
+    "image": "assets/images/investigation-27.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
+  },
+  {
+    "id": 28,
+    "title": "Coastal Monolith",
+    "category": "dwellings",
+    "image": "assets/images/investigation-28.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
+  },
+  {
+    "id": 29,
+    "title": "Forest Terminal",
+    "category": "terminals",
+    "image": "assets/images/investigation-29.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 30,
+    "title": "Light Court",
+    "category": "terminals",
+    "image": "assets/images/investigation-30.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 31,
+    "title": "Arrival Garden",
+    "category": "terminals",
+    "image": "assets/images/investigation-31.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 32,
+    "title": "Water Atrium",
+    "category": "terminals",
+    "image": "assets/images/investigation-32.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 33,
+    "title": "Robot Concourse",
+    "category": "terminals",
+    "image": "assets/images/investigation-33.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 34,
+    "title": "Sky Hall",
+    "category": "terminals",
+    "image": "assets/images/investigation-34.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 35,
+    "title": "Civic Gate",
+    "category": "terminals",
+    "image": "assets/images/investigation-35.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 36,
+    "title": "Aerial Port",
+    "category": "terminals",
+    "image": "assets/images/investigation-36.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 37,
+    "title": "Ocean Harbor Cruiseport",
+    "category": "terminals",
+    "image": "assets/images/investigation-37.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 38,
+    "title": "Pier Terminal",
+    "category": "terminals",
+    "image": "assets/images/investigation-38.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 39,
+    "title": "Dolphin Hall",
+    "category": "terminals",
+    "image": "assets/images/investigation-39.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 40,
+    "title": "Maritime Threshold",
+    "category": "terminals",
+    "image": "assets/images/investigation-40.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 41,
+    "title": "Departure Landscape",
+    "category": "terminals",
+    "image": "assets/images/investigation-41.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 42,
+    "title": "The Last Gate",
+    "category": "terminals",
+    "image": "assets/images/investigation-42.png",
+    "description": "A terminal imagined as more than an instrument of arrival and departure. Light, water, vegetation, and movement are composed as public architecture, transforming transition into a memorable civic ritual.",
+    "poem": "Between leaving and arriving,\nspace becomes ceremony.\nA threshold holds the crowd,\nthen releases it to distance."
+  },
+  {
+    "id": 43,
+    "title": "Atmospheric Elevator",
+    "category": "speculations",
+    "image": "assets/images/investigation-43.png",
+    "description": "A speculative fragment positioned between infrastructure and myth. The project tests how architecture might operate at scales beyond the conventional building, joining technological ambition to collective imagination.",
+    "poem": "The possible has no address.\nIt waits beyond the measured line.\nArchitecture enters the unknown,\nand returns carrying a fragment."
+  },
+  {
+    "id": 44,
+    "title": "Orbital Anchorage",
+    "category": "speculations",
+    "image": "assets/images/investigation-44.png",
+    "description": "A speculative fragment positioned between infrastructure and myth. The project tests how architecture might operate at scales beyond the conventional building, joining technological ambition to collective imagination.",
+    "poem": "The possible has no address.\nIt waits beyond the measured line.\nArchitecture enters the unknown,\nand returns carrying a fragment."
+  },
+  {
+    "id": 45,
+    "title": "Rocket Station",
+    "category": "speculations",
+    "image": "assets/images/investigation-45.png",
+    "description": "A speculative fragment positioned between infrastructure and myth. The project tests how architecture might operate at scales beyond the conventional building, joining technological ambition to collective imagination.",
+    "poem": "The possible has no address.\nIt waits beyond the measured line.\nArchitecture enters the unknown,\nand returns carrying a fragment."
+  },
+  {
+    "id": 46,
+    "title": "Vertical Frontier",
+    "category": "speculations",
+    "image": "assets/images/investigation-46.png",
+    "description": "A speculative fragment positioned between infrastructure and myth. The project tests how architecture might operate at scales beyond the conventional building, joining technological ambition to collective imagination.",
+    "poem": "The possible has no address.\nIt waits beyond the measured line.\nArchitecture enters the unknown,\nand returns carrying a fragment."
+  },
+  {
+    "id": 47,
+    "title": "Floating Base",
+    "category": "speculations",
+    "image": "assets/images/investigation-47.png",
+    "description": "A speculative fragment positioned between infrastructure and myth. The project tests how architecture might operate at scales beyond the conventional building, joining technological ambition to collective imagination.",
+    "poem": "The possible has no address.\nIt waits beyond the measured line.\nArchitecture enters the unknown,\nand returns carrying a fragment."
+  },
+  {
+    "id": 48,
+    "title": "Sacred Interchange",
+    "category": "speculations",
+    "image": "assets/images/investigation-48.png",
+    "description": "A speculative fragment positioned between infrastructure and myth. The project tests how architecture might operate at scales beyond the conventional building, joining technological ambition to collective imagination.",
+    "poem": "The possible has no address.\nIt waits beyond the measured line.\nArchitecture enters the unknown,\nand returns carrying a fragment."
+  },
+  {
+    "id": 49,
+    "title": "Temple of Movement",
+    "category": "speculations",
+    "image": "assets/images/investigation-49.png",
+    "description": "A speculative fragment positioned between infrastructure and myth. The project tests how architecture might operate at scales beyond the conventional building, joining technological ambition to collective imagination.",
+    "poem": "The possible has no address.\nIt waits beyond the measured line.\nArchitecture enters the unknown,\nand returns carrying a fragment."
+  },
+  {
+    "id": 50,
+    "title": "City of Solids",
+    "category": "speculations",
+    "image": "assets/images/investigation-50.png",
+    "description": "A speculative fragment positioned between infrastructure and myth. The project tests how architecture might operate at scales beyond the conventional building, joining technological ambition to collective imagination.",
+    "poem": "The possible has no address.\nIt waits beyond the measured line.\nArchitecture enters the unknown,\nand returns carrying a fragment."
+  },
+  {
+    "id": 51,
+    "title": "Portal Field",
+    "category": "speculations",
+    "image": "assets/images/investigation-51.png",
+    "description": "A speculative fragment positioned between infrastructure and myth. The project tests how architecture might operate at scales beyond the conventional building, joining technological ambition to collective imagination.",
+    "poem": "The possible has no address.\nIt waits beyond the measured line.\nArchitecture enters the unknown,\nand returns carrying a fragment."
+  },
+  {
+    "id": 52,
+    "title": "The Common City",
+    "category": "speculations",
+    "image": "assets/images/investigation-52.png",
+    "description": "A speculative fragment positioned between infrastructure and myth. The project tests how architecture might operate at scales beyond the conventional building, joining technological ambition to collective imagination.",
+    "poem": "The possible has no address.\nIt waits beyond the measured line.\nArchitecture enters the unknown,\nand returns carrying a fragment."
+  },
+  {
+    "id": 53,
+    "title": "Canyon Habitat",
+    "category": "dwellings",
+    "image": "assets/images/investigation-53.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
+  },
+  {
+    "id": 54,
+    "title": "Desert Retreat",
+    "category": "dwellings",
+    "image": "assets/images/investigation-54.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
+  },
+  {
+    "id": 55,
+    "title": "Canyon Habitat II",
+    "category": "dwellings",
+    "image": "assets/images/investigation-55.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
+  },
+  {
+    "id": 56,
+    "title": "Desert Retreat II",
+    "category": "dwellings",
+    "image": "assets/images/investigation-56.png",
+    "description": "A study of habitation shaped by landscape rather than imposed upon it. Structure, enclosure, and atmosphere form a measured refuge in which domestic life remains in constant dialogue with terrain, climate, and horizon.",
+    "poem": "A room meets the horizon,\na roof receives the weather.\nTo inhabit is to listen\nto the ground beneath form."
   }
 ];

@@ -1,74 +1,124 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="SEGMENTS — an evolving publication of unbuilt architecture by Andre Vasconcelos.">
-<title>SEGMENTS v1.2 — Andre Vasconcelos</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="SEGMENTS — an archive of speculative architectural investigations by Andre Vasconcelos.">
+  <title>SEGMENTS — Andre Vasconcelos</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <a href="#top" class="wordmark">SEGMENTS</a>
-  <nav><a href="#archive">Archive</a><a href="#prologue">Prologue</a><a href="#support">Support</a><a href="#contact">Contact</a></nav>
-</header>
+  <div class="page-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="SEGMENTS home">SEGMENTS</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="#archive">Archive</a>
+      <a href="#prologue">Prologue</a>
+      <button id="open-leisure" class="nav-button">Leisure</button>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
 
-<main id="top">
-<section class="hero">
-  <p class="author">Andre Vasconcelos · Version 1.2</p>
-  <h1>SEGMENTS</h1>
-  <p class="strap">CRITICAL ARCHITECTURE — SPECULATIVE INFRASTRUCTURE — DEFINITIVE VISIONS</p>
-</section>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">Andre Vasconcelos</p>
+        <h1 id="hero-title">SEGMENTS</h1>
+        <p class="strap">CRITICAL ARCHITECTURE — SPECULATIVE INFRASTRUCTURE — DEFINITIVE VISIONS</p>
+      </div>
+      <a class="enter-link" href="#archive">Enter archive <span>↓</span></a>
+    </section>
 
-<section id="archive" class="archive">
-  <div class="section-head"><span>Archive</span><span id="count"></span></div>
-  <div id="gallery" class="gallery"></div>
-</section>
+    <section id="archive" class="archive section-pad">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Archive</p>
+          <h2>56 investigations</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter investigations">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="dwellings">Dwellings</button>
+          <button class="filter" data-filter="terminals">Terminals</button>
+          <button class="filter" data-filter="infrastructure">Infrastructure</button>
+          <button class="filter" data-filter="speculations">Speculations</button>
+        </div>
+      </div>
+      <div id="gallery" class="gallery" aria-live="polite"></div>
+    </section>
 
-<section id="prologue" class="prologue">
-  <p class="eyebrow">Prologue</p>
-  <p class="lead">SEGMENTS is conceived as an archive of investigations—an evolving body of work exploring infrastructure, landscape, mobility, and the philosophical dimensions of the built environment. Each work is a fragment of a larger inquiry into how architecture can respond to the realities of the present while revealing those yet to come.</p>
-  <div class="manifesto">
-    <p></p>
-    <p>The built environment records conflict, scarcity, ambition, and hope. War, poverty, and economic systems become spatial before they become visible. Waste space and wasteland are not voids, but territories whose potential has not yet been articulated.</p>
-    <p>Geometry offers order; amusement and discovery preserve uncertainty. Transport is physical, mental, and civic. Every threshold is both portal and proposition—a gate between what exists and what might.</p>
-  </div>
-  <p class="closing">ARCHITECTURE IS THE PROJECT</p>
-</section>
+    <section id="prologue" class="prologue section-pad">
+      <div class="prologue-grid">
+        <p class="eyebrow">Prologue</p>
+        <div>
+          <p class="lead">SEGMENTS is conceived as an archive of investigations—an evolving body of work exploring infrastructure, landscape, mobility, and the philosophical dimensions of the built environment. Each work is a fragment of a larger inquiry into how architecture can respond to the realities of the present while revealing those yet to come.</p>
+          <div class="manifesto">
+            <p>War, poverty, and economic systems become spatial before they become visible.</p>
+            <p>Waste space and wasteland are not voids, but territories whose potential has not yet been articulated.</p>
+            <p>Geometry offers order; amusement and discovery preserve uncertainty.</p>
+            <p>Means of transport become mental transport, physical transport, and civic imagination.</p>
+            <p>Every threshold is both a portal and a proposition.</p>
+          </div>
+        </div>
+      </div>
+      <p class="closing-line">ARCHITECTURE IS THE PROJECT.</p>
+    </section>
 
-<section id="support" class="support">
-  <p class="eyebrow">Support Future Investigations</p>
-  <p>SEGMENTS is an independent architectural publication. If these investigations resonate with you, your support helps sustain future drawings, research, and editions.</p>
-  <a class="support-button" href="https://buymeacoffee.com/andrevasconcelos" target="_blank" rel="noopener noreferrer">SUPPORT SEGMENTS →</a>
-</section>
+    <section id="support" class="support section-pad">
+      <p class="eyebrow">Support</p>
+      <h2>Help sustain future investigations.</h2>
+      <p>SEGMENTS is an independent architectural publication. Support contributes to new drawings, research, visual experiments, and future editions.</p>
+      <a class="support-link" href="https://buymeacoffee.com/andrevasconcelos" target="_blank" rel="noopener noreferrer">Buy Me a Coffee ↗</a>
+    </section>
+  </main>
 
-<section id="contact" class="contact">
-  <p>Andre Vasconcelos</p>
-  <a href="mailto:andreread@hotmail.com">andreread@hotmail.com</a>
-</section>
-</main>
-
-<footer>
-  <img src="assets/logo.png" alt="Andre Vasconcelos initials mark">
-  <p>SEGMENTS continues.</p>
-</footer>
-
-<dialog id="viewer">
-  <button id="close" aria-label="Close">×</button>
-  <button id="prev" class="nav prev" aria-label="Previous">←</button>
-  <div class="modal-inner">
-    <img id="modalImage" alt="">
-    <div class="modal-copy">
-      <p id="modalNumber" class="number"></p>
-      <h2 id="modalTitle"></h2>
-      <p id="modalDescription" class="description"></p>
-      <div class="fragment"><span>Critical Fragment</span><p id="modalFragment"></p></div>
+  <footer class="site-footer">
+    <div>
+      <strong>SEGMENTS</strong>
+      <p>An evolving archive by Andre Vasconcelos.</p>
     </div>
-  </div>
-  <button id="next" class="nav next" aria-label="Next">→</button>
-</dialog>
+    <div class="footer-links">
+      <a href="mailto:andreread@hotmail.com">Email</a>
+      <a href="#top">Top ↑</a>
+    </div>
+  </footer>
 
-<script src="works.js"></script>
-<script src="script.js"></script>
+  <dialog id="viewer" class="viewer">
+    <button id="viewer-close" class="icon-button close-button" aria-label="Close viewer">×</button>
+    <button id="viewer-prev" class="viewer-nav prev" aria-label="Previous investigation">←</button>
+    <figure class="viewer-stage">
+      <img id="viewer-image" alt="">
+      <figcaption class="viewer-caption">
+        <div class="viewer-meta"><span id="viewer-index"></span><span id="viewer-category"></span></div>
+        <h2 id="viewer-title"></h2>
+        <p id="viewer-description"></p>
+        <p id="viewer-poem" class="poem"></p>
+      </figcaption>
+    </figure>
+    <button id="viewer-next" class="viewer-nav next" aria-label="Next investigation">→</button>
+  </dialog>
+
+  <dialog id="leisure" class="leisure">
+    <img src="assets/images/leisure-panorama.png" alt="Speculative panoramic city and landscape" class="leisure-bg">
+    <div class="leisure-shade" aria-hidden="true"></div>
+    <button id="leisure-close" class="icon-button leisure-close" aria-label="Close author section">×</button>
+    <article class="leisure-copy">
+      <p class="eyebrow">About the author</p>
+      <h2>SEGMENTS ARCHITECT</h2>
+      <p>Andre is very contemplative. In solitude, he analyses the world and his surroundings with great care. Observation has always preceded creation; long before architecture became a discipline, it was simply a way of understanding the world.</p>
+      <p>At the age of seven, he received a drawing book as a belated birthday gift. Like many children, he had hoped for toys instead. A book seemed like a disappointment. Reluctantly, he opened it.</p>
+      <p>One page changed everything.</p>
+      <p>It revealed the complete anatomy of a horse—its skeleton and musculature meticulously illustrated, as though its skin had vanished. That image filled him with an overwhelming sense of wonder. It was the first time a drawing revealed that imagination could coexist with knowledge, and that beauty could emerge from understanding.</p>
+      <p>On the back of the book, his godfather had written two words: <strong>INSPIRATION × TRANSPIRATION</strong>. At seven years old, they meant very little.</p>
+      <p>Within a year, he had painstakingly reproduced nearly every drawing the book contained. Among them, one remained unforgettable: the face of a madman. Decades later, he can still picture it with remarkable clarity.</p>
+      <p>As time passed, he continued to develop his ability to draw, but he devoted even more energy to cultivating his imagination. Drawing became a tool; imagination became the destination.</p>
+      <p><strong>SEGMENTS</strong> is the result of that journey—a body of work shaped by discipline, curiosity, and the persistent desire to imagine worlds that do not yet exist.</p>
+      <p>If these investigations leave the visitor with a renewed sense of curiosity, then they have fulfilled their purpose.</p>
+    </article>
+  </dialog>
+
+  <script src="works.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
