@@ -1,151 +1,88 @@
 (() => {
-  const projectRoot = new URL('../', document.baseURI);
-  const resolveImage = value => {
-    if (!value) return '';
-    try {
-      return new URL(value, projectRoot).href;
-    } catch {
-      return value;
-    }
-  };
-
-  const works = (window.SEGMENTS_WORKS || []).map(work => ({
-    ...work,
-    image: resolveImage(work.image)
-  }));
-
+  const works = Array.isArray(window.SEGMENTS_WORKS) ? window.SEGMENTS_WORKS : [];
   const gallery = document.querySelector('#gallery');
-  const viewer = document.querySelector('#viewer');
+  const status = document.querySelector('#gallery-status');
+  const filters = [...document.querySelectorAll('.filter')];
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('#site-nav');
+  const dialog = document.querySelector('#viewer');
   const image = document.querySelector('#viewer-image');
   const title = document.querySelector('#viewer-title');
   const description = document.querySelector('#viewer-description');
   const poem = document.querySelector('#viewer-poem');
-  const index = document.querySelector('#viewer-index');
-  const category = document.querySelector('#viewer-category');
-  let visibleWorks = works.slice();
-  let current = 0;
+  const indexLabel = document.querySelector('#viewer-index');
+  const categoryLabel = document.querySelector('#viewer-category');
+  const closeBtn = document.querySelector('#viewer-close');
+  const prevBtn = document.querySelector('#viewer-prev');
+  const nextBtn = document.querySelector('#viewer-next');
+  let visible = works.slice();
+  let activeIndex = 0;
 
-  const label = value => value ? value.charAt(0).toUpperCase() + value.slice(1) : '';
+  const esc = (s='') => String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  const pad = n => String(n).padStart(2,'0');
 
-  function buildGallery() {
+  function render(filter='all') {
+    visible = filter === 'all' ? works.slice() : works.filter(w => w.category === filter);
     gallery.innerHTML = '';
-
+    status.textContent = `${visible.length} investigation${visible.length === 1 ? '' : 's'}`;
     if (!works.length) {
-      gallery.innerHTML = '<p>Archive data could not be loaded.</p>';
+      status.textContent = 'Gallery data did not load. Confirm that works.js is beside index.html.';
       return;
     }
-
-    works.forEach((work, i) => {
-      const button = document.createElement('button');
-      button.className = 'card';
-      button.dataset.category = work.category || '';
-      button.dataset.id = String(work.id);
-
-      const media = document.createElement('span');
-      media.className = 'card-media';
-
-      const img = document.createElement('img');
-      img.src = work.image;
-      img.alt = work.title || 'Architectural investigation';
-      img.loading = i < 3 ? 'eager' : 'lazy';
-      img.decoding = 'async';
-      if (i === 0) img.fetchPriority = 'high';
-
-      img.addEventListener('load', () => {
-        if (img.naturalHeight > img.naturalWidth) button.classList.add('portrait');
-      }, { once: true });
-
+    visible.forEach((work, i) => {
+      const card = document.createElement('button');
+      card.className = 'card';
+      card.type = 'button';
+      card.setAttribute('aria-label', `Open ${work.title}`);
+      card.innerHTML = `<div class="card-media"><img src="${esc(work.image)}" alt="${esc(work.alt || work.title)}" loading="lazy" decoding="async"></div><div class="card-meta"><span class="card-title">${pad(i+1)} — ${esc(work.title)}</span><span class="card-category">${esc(work.category)}</span></div>`;
+      const img = card.querySelector('img');
       img.addEventListener('error', () => {
-        console.error('SEGMENTS image failed to load:', work.image);
-        img.remove();
-        const error = document.createElement('span');
-        error.className = 'image-error';
-        error.textContent = 'Image unavailable';
-        media.appendChild(error);
-      }, { once: true });
-
-      media.appendChild(img);
-
-      const copy = document.createElement('span');
-      copy.className = 'card-copy';
-      copy.innerHTML = `
-        <span><span class="card-title"></span><br><span class="card-category"></span></span>
-        <span class="card-index">${String(i + 1).padStart(3, '0')}</span>`;
-      copy.querySelector('.card-title').textContent = work.title || 'Untitled';
-      copy.querySelector('.card-category').textContent = label(work.category);
-
-      button.append(media, copy);
-      button.addEventListener('click', () => openViewer(work.id));
-      gallery.appendChild(button);
+        const wrap = card.querySelector('.card-media');
+        wrap.innerHTML = `<div class="image-error">Missing image<br>${esc(work.image)}</div>`;
+      }, {once:true});
+      card.addEventListener('click', () => openViewer(i));
+      gallery.appendChild(card);
     });
   }
 
-  function openViewer(id) {
-    const workIndex = visibleWorks.findIndex(work => work.id === id);
-    current = workIndex >= 0 ? workIndex : 0;
-    updateViewer();
-    viewer.showModal();
-    document.body.classList.add('no-scroll');
-  }
-
-  function updateViewer() {
-    const work = visibleWorks[current];
-    if (!work) return;
+  function openViewer(i) {
+    activeIndex = i;
+    const work = visible[activeIndex];
     image.src = work.image;
-    image.alt = work.title || 'Architectural investigation';
-    title.textContent = work.title || 'Untitled';
+    image.alt = work.alt || work.title;
+    title.textContent = work.title;
     description.textContent = work.description || '';
     poem.textContent = work.poem || '';
-    index.textContent = `${String(current + 1).padStart(3, '0')} / ${String(visibleWorks.length).padStart(3, '0')}`;
-    category.textContent = label(work.category);
-
-    const next = visibleWorks[(current + 1) % visibleWorks.length];
-    if (next) {
-      const preload = new Image();
-      preload.src = next.image;
-    }
+    indexLabel.textContent = `${pad(activeIndex+1)} / ${pad(visible.length)}`;
+    categoryLabel.textContent = work.category || '';
+    if (typeof dialog.showModal === 'function') dialog.showModal();
+    else dialog.setAttribute('open','');
   }
 
-  function move(delta) {
-    if (!visibleWorks.length) return;
-    current = (current + delta + visibleWorks.length) % visibleWorks.length;
-    updateViewer();
+  function step(delta) {
+    activeIndex = (activeIndex + delta + visible.length) % visible.length;
+    openViewer(activeIndex);
   }
 
-  document.querySelectorAll('.filter').forEach(button => {
-    button.addEventListener('click', () => {
-      document.querySelectorAll('.filter').forEach(item => item.classList.remove('active'));
-      button.classList.add('active');
-      const filter = button.dataset.filter;
-      visibleWorks = filter === 'all' ? works.slice() : works.filter(work => work.category === filter);
-      document.querySelectorAll('.card').forEach(card => {
-        card.hidden = filter !== 'all' && card.dataset.category !== filter;
-      });
-    });
-  });
-
-  document.querySelector('#viewer-close').addEventListener('click', () => viewer.close());
-  document.querySelector('#viewer-prev').addEventListener('click', () => move(-1));
-  document.querySelector('#viewer-next').addEventListener('click', () => move(1));
-  viewer.addEventListener('close', () => document.body.classList.remove('no-scroll'));
-  viewer.addEventListener('click', event => {
-    if (event.target === viewer) viewer.close();
-  });
-
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.site-nav');
-  toggle.addEventListener('click', () => {
+  filters.forEach(btn => btn.addEventListener('click', () => {
+    filters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.filter);
+  }));
+  menuToggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-expanded', String(open));
   });
-  nav.addEventListener('click', () => nav.classList.remove('open'));
-
-  document.addEventListener('keydown', event => {
-    if (!viewer.open) return;
-    if (event.key === 'ArrowRight') move(1);
-    if (event.key === 'ArrowLeft') move(-1);
-    if (event.key === 'Escape') viewer.close();
+  nav.addEventListener('click', () => { nav.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); });
+  closeBtn.addEventListener('click', () => dialog.close());
+  prevBtn.addEventListener('click', () => step(-1));
+  nextBtn.addEventListener('click', () => step(1));
+  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
+  document.addEventListener('keydown', e => {
+    if (!dialog.open) return;
+    if (e.key === 'ArrowLeft') step(-1);
+    if (e.key === 'ArrowRight') step(1);
   });
 
-  buildGallery();
+  render();
 })();

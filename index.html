@@ -3,38 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fbfaf6">
-  <meta name="description" content="SEGMENTS v2 — an architectural archive by Andre Vasconcelos.">
-  <title>SEGMENTS v2 — Preview</title>
-  <link rel="stylesheet" href="styles.css?v=20260719-2">
+  <meta name="theme-color" content="#f4f0e7">
+  <meta name="description" content="SEGMENTS — an architectural archive by Andre Vasconcelos.">
+  <title>SEGMENTS — Andre Vasconcelos</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top">SEGMENTS <span>v2 preview</span></a>
+    <a class="brand" href="#top" aria-label="SEGMENTS home">SEGMENTS</a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Primary">
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
       <a href="#archive">Archive</a>
       <a href="#manifesto">Manifesto</a>
-      <a href="#leisure">Leisure</a>
+      <a href="#architect">Architect</a>
       <a href="#support">Support</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <p class="kicker">Andre Vasconcelos</p>
-      <h1>SEGMENTS</h1>
+      <h1 id="hero-title">SEGMENTS</h1>
       <div class="hero-bottom">
         <p>Critical Architecture<br>Speculative Infrastructure<br>Definitive Visions</p>
         <a href="#archive">Enter archive ↓</a>
       </div>
     </section>
 
-    <section id="archive" class="section archive">
+    <section id="archive" class="section archive" aria-labelledby="archive-title">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Archive</p>
-          <h2>Investigations</h2>
+          <h2 id="archive-title">Investigations</h2>
         </div>
         <div class="filters" role="group" aria-label="Filter investigations">
           <button class="filter active" data-filter="all">All</button>
@@ -44,12 +44,13 @@
           <button class="filter" data-filter="speculations">Speculations</button>
         </div>
       </div>
+      <div id="gallery-status" class="gallery-status" aria-live="polite"></div>
       <div id="gallery" class="gallery"></div>
     </section>
 
     <section id="manifesto" class="section manifesto">
       <p class="eyebrow">Manifesto</p>
-      <p class="lead">SEGMENTS is conceived as an archive of investigations—an evolving body of work exploring infrastructure, landscape, mobility, and the philosophical dimensions of the built environment.</p>
+      <p class="lead">SEGMENTS is conceived as an archive of investigations—an evolving body of work exploring infrastructure, landscape, mobility, and the philosophical dimensions of the built environment. Each work is a fragment of a larger inquiry into how architecture can respond to the realities of the present while revealing those yet to come.</p>
       <div class="manifesto-grid">
         <p>War, poverty, and economic systems become spatial before they become visible.</p>
         <p>Waste space and wasteland are territories whose potential has not yet been articulated.</p>
@@ -60,9 +61,9 @@
       <p class="closing-line">ARCHITECTURE IS THE PROJECT.</p>
     </section>
 
-    <section id="leisure" class="section leisure">
-      <div class="leisure-heading">
-        <p class="eyebrow">Leisure</p>
+    <section id="architect" class="section architect">
+      <div class="architect-heading">
+        <p class="eyebrow">Architect</p>
         <h2>SEGMENTS ARCHITECT</h2>
       </div>
       <article class="essay">
@@ -90,8 +91,8 @@
   </footer>
 
   <dialog id="viewer" class="viewer">
-    <button id="viewer-close" class="close" aria-label="Close">×</button>
-    <button id="viewer-prev" class="nav prev" aria-label="Previous">←</button>
+    <button id="viewer-close" class="close" aria-label="Close viewer">×</button>
+    <button id="viewer-prev" class="nav prev" aria-label="Previous project">←</button>
     <figure>
       <div class="image-wrap"><img id="viewer-image" alt=""></div>
       <figcaption>
@@ -101,10 +102,10 @@
         <p id="viewer-poem" class="poem"></p>
       </figcaption>
     </figure>
-    <button id="viewer-next" class="nav next" aria-label="Next">→</button>
+    <button id="viewer-next" class="nav next" aria-label="Next project">→</button>
   </dialog>
 
-  <script src="../works.js?v=20260719-2"></script>
-  <script src="script.js?v=20260719-2"></script>
+  <script src="works.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
