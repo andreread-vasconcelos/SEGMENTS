@@ -1,434 +1,326 @@
-window.SEGMENTS_WORKS = [
+const works = [
   {
-    "id": 1,
-    "title": "Elevated City Studies",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-01.png",
-    "description": "A composite plate of twenty views studies inhabited megastructures positioned above highways, rail lines, plazas, and transit corridors. The series tests how structure, circulation, commerce, and public life can form a continuous city in section.",
-    "poem": "Many spans, one inquiry.\nThe city rises above movement\nand learns to inhabit the line."
+    "title": "Atlas of Megastructures",
+    "description": "A comparative sheet of sectional cities, transport frames, inhabited bridges, and monumental urban machines. The studies test how one architectural language can expand across many scales without settling into a single final form.",
+    "fragment": "Many fragments rehearse the possibility of one larger city.",
+    "src": "assets/images/investigation-01.png"
   },
   {
-    "id": 2,
-    "title": "Transit Terrace",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-02.png",
-    "description": "A layered civic megastructure spans a metropolitan highway while high-speed rail, terraces, towers, and public rooms converge within one elevated district.",
-    "poem": "The train carries distance;\nthe building gathers life.\nA corridor becomes an address."
+    "title": "Inhabited Transit Citadel",
+    "description": "A dense megastructure rises above rail and road, combining terraces, circulation decks, towers, and civic occupation within a single infrastructural body.",
+    "fragment": "The city gathers where movement acquires rooms.",
+    "src": "assets/images/investigation-02.png"
   },
   {
-    "id": 3,
-    "title": "Sectional City",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-03.png",
-    "description": "A deep cutaway reveals stacked public floors, escalators, bridges, and service cores suspended above a highway. Density is organized as a broad horizontal field rather than a single tower.",
-    "poem": "Floor above floor,\npath across path.\nThe city is braided in section."
-  },
-  {
-    "id": 4,
     "title": "Metropolitan Gate",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-04.png",
-    "description": "A monumental bridge-building frames road and rail beneath an inhabited civic hall. The crossing becomes both transport infrastructure and an urban threshold.",
-    "poem": "The road passes through;\nthe city pauses above.\nA threshold becomes a proposition."
+    "description": "A broad inhabited frame spans an active transportation corridor. Layered decks, vertical towers, and elevated public space transform the crossing into a monumental urban threshold.",
+    "fragment": "A gate is not passed through once; it becomes a place.",
+    "src": "assets/images/investigation-03.png"
   },
   {
-    "id": 5,
-    "title": "Suspended Commons",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-05.png",
-    "description": "A transparent multi-level structure bridges a transport corridor, combining workplaces, terraces, transit platforms, and aerial mobility within one suspended urban room.",
-    "poem": "Many paths arrive,\nnone remain isolated.\nCommon ground rises into air."
+    "title": "Bridge of Occupation",
+    "description": "A heavy horizontal building bridges the railway and establishes a second ground above the tracks. Its mass is opened by terraces, voids, and vertical elements that register the movement below.",
+    "fragment": "Above the line of travel, another city begins.",
+    "src": "assets/images/investigation-04.png"
   },
   {
-    "id": 6,
-    "title": "Elevated Civic Frame",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-06.png",
-    "description": "An inhabited frame is lifted above road and rail on monumental supports. Open floors and terraces transform the infrastructural corridor into a civic frontage.",
-    "poem": "The span holds many lives,\nthe traffic continues below.\nA bridge becomes a district."
+    "title": "Transparent Urban Frame",
+    "description": "A skeletal multi-level structure stretches over the street as an exposed framework for circulation, occupation, and future change. The building reads less as an object than as an unfinished civic armature.",
+    "fragment": "What remains open can continue to become.",
+    "src": "assets/images/investigation-05.png"
   },
   {
-    "id": 7,
-    "title": "Structural Canopy",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-07.png",
-    "description": "A vast elevated building forms a monumental ceiling above movement. Its branching underside turns the highway and rail corridor into an architectural interior.",
-    "poem": "Structure opens like a canopy;\nmovement enters its shade.\nThe road discovers a ceiling."
+    "title": "Cathedral of Movement",
+    "description": "A symmetrical interior of branching columns and elevated tracks turns infrastructure into a vast public nave. Repetition, depth, and converging lines give collective movement a ceremonial scale.",
+    "fragment": "Velocity enters the nave and becomes ritual.",
+    "src": "assets/images/investigation-06.png"
   },
   {
-    "id": 8,
-    "title": "Urban Nave",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-08.png",
-    "description": "A frontal study presents a deep linear megastructure spanning metropolitan transport. Repeated galleries and occupied floors create an urban nave organized around movement.",
-    "poem": "Lines converge in distance;\nrooms gather at the edge.\nThe corridor becomes a hall."
+    "title": "Branching Transit Hall",
+    "description": "Tree-like structural supports carry an elevated urban system above a central roadway. The underside becomes a continuous metropolitan interior shaped by light, rhythm, and mechanical order.",
+    "fragment": "Structure branches so the ground may remain in motion.",
+    "src": "assets/images/investigation-07.png"
   },
   {
-    "id": 9,
-    "title": "Viaduct Variations",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-09.png",
-    "description": "Five perspective studies compare long inhabited viaducts beside and above rail and highway systems. Each variation tests structure, support, scale, and terminal conditions.",
-    "poem": "One type becomes five;\neach span finds another stance.\nVariation becomes method."
+    "title": "Megastructure Variations",
+    "description": "A series of compact studies examines bridges, towers, elevated platforms, and sectional frames as interchangeable parts of a larger infrastructural vocabulary.",
+    "fragment": "The future is tested through variations, not conclusions.",
+    "src": "assets/images/investigation-08.png"
   },
   {
-    "id": 10,
-    "title": "Linear Megastructure Studies",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-10.png",
-    "description": "A second plate examines extended inhabited structures above transport corridors from frontal, oblique, and sectional viewpoints.",
-    "poem": "The building follows the road,\nthen rises across it.\nThe horizon becomes occupied."
+    "title": "Elevated City Studies",
+    "description": "Multiple perspectives explore a linear city suspended beside and above transportation corridors. Each drawing tests a different relation between structural depth, public movement, and the distant skyline.",
+    "fragment": "One idea changes as the horizon changes.",
+    "src": "assets/images/investigation-09.png"
   },
   {
-    "id": 11,
-    "title": "Rail City",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-11.png",
-    "description": "A long elevated building parallels a high-speed rail corridor against a dense speculative skyline. The railway becomes the organizing spine of a linear city.",
-    "poem": "The train carries distance;\nthe building carries time.\nTwo horizons compose one city."
+    "title": "Railway Urbanism",
+    "description": "A long inhabited structure runs parallel to an active rail line, transforming the edge of the tracks into a dense metropolitan frontage of terraces, bridges, and vertical circulation.",
+    "fragment": "The railway no longer divides the city; it gives it direction.",
+    "src": "assets/images/investigation-10.png"
   },
   {
-    "id": 12,
-    "title": "Metropolitan Rail Edge",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-12.png",
-    "description": "A high-speed train passes a suspended urban structure extending toward the horizon. Architecture occupies the rail edge without separating itself from movement.",
-    "poem": "Rail keeps its course;\nrooms face the passing line.\nThe edge becomes inhabited."
+    "title": "Suspended Rail City",
+    "description": "A vertically layered building occupies the narrow territory beside rail infrastructure. Bridges and projecting platforms turn residual land into an intense linear settlement.",
+    "fragment": "At the margin of the tracks, density finds another ground.",
+    "src": "assets/images/investigation-11.png"
   },
   {
-    "id": 13,
-    "title": "Inhabited Highway Wall",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-13.png",
-    "description": "A transparent megastructure follows a broad highway on repeated supports. Multiple occupied levels transform an infrastructural boundary into a continuous urban frontage.",
-    "poem": "The highway moves below;\nthe city watches above.\nA wall becomes porous."
+    "title": "Highway Wall",
+    "description": "A monumental residential and civic slab defines the edge of a highway. Deep structural bays, planted terraces, and elevated circulation propose habitation at the scale of regional movement.",
+    "fragment": "The wall faces speed without surrendering life.",
+    "src": "assets/images/investigation-12.png"
   },
   {
-    "id": 14,
-    "title": "Civic Viaduct",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-14.png",
-    "description": "An elongated inhabited structure rises beside a wet boulevard. Public galleries, structural frames, and pedestrian routes form a linear metropolitan building.",
-    "poem": "Speed crosses the avenue;\nlife keeps another rhythm.\nBoth share one structure."
+    "title": "Civic Truss",
+    "description": "An exposed triangular frame lifts a large public structure over the roadway. Its structural depth becomes inhabitable, allowing circulation and occupation to coexist within the bridge itself.",
+    "fragment": "The span is thickened until it becomes a city.",
+    "src": "assets/images/investigation-13.png"
   },
   {
-    "id": 15,
-    "title": "Promenade and Rail",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-15.png",
-    "description": "A dense elevated structure runs beside high-speed rail and roadway. Repeated cores and public galleries create a long inhabited promenade at infrastructural scale.",
-    "poem": "Rail carries speed;\nthe promenade carries time.\nTwo movements share one horizon."
+    "title": "Linear Metropolis",
+    "description": "A continuous megastructure follows the highway as a new metropolitan horizon. Repetitive bays and elevated volumes convert the transportation corridor into a sustained field of habitation.",
+    "fragment": "The horizon becomes inhabitable through repetition.",
+    "src": "assets/images/investigation-14.png"
   },
   {
-    "id": 16,
-    "title": "Transit Bridge Commons",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-16.png",
-    "description": "A glass pedestrian bridge and transit platforms connect both sides of a central multimodal corridor beneath a large inhabited building.",
-    "poem": "The bridge gathers routes;\nthe platforms gather people.\nMovement becomes common ground."
+    "title": "Inhabited Crossing",
+    "description": "Two vertical anchors support a broad elevated volume over multiple traffic lanes. Gardens and occupied decks soften the infrastructural scale while preserving the clarity of the crossing.",
+    "fragment": "Between two towers, the road receives a civic ceiling.",
+    "src": "assets/images/investigation-15.png"
   },
   {
-    "id": 17,
-    "title": "Urban Plan Studies",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-17.png",
-    "description": "Four aerial studies compare civic gateways, curved residential groupings, perimeter blocks, and buildings spanning major avenues. The investigation shifts from object to urban fabric.",
-    "poem": "The city is seen from above;\nblocks become propositions.\nGround is redrawn."
+    "title": "Urban Plan Constellations",
+    "description": "Plans and aerial studies arrange civic buildings, circular spaces, corridors, and open ground as interconnected urban fields. The city is explored as a constellation of relationships rather than isolated objects.",
+    "fragment": "The plan discovers order between fragments.",
+    "src": "assets/images/investigation-16.png"
   },
   {
-    "id": 18,
-    "title": "Highway Sanctuary",
-    "category": "speculations",
-    "image": "assets/images/investigation-18.png",
-    "description": "A temple-like civic structure rises above a sunken highway, framing a planted interior court and ceremonial stair. Contemplation is placed within the landscape of speed.",
-    "poem": "Traffic enters the ground;\nsilence rises above it.\nPassage and pause meet."
+    "title": "Highway Sanctuary I",
+    "description": "A temple-like structure rises from the median of a highway, framing the road with steep structural wings. Sacred form and vehicular movement are placed in deliberate tension.",
+    "fragment": "Contemplation stands where speed refuses to stop.",
+    "src": "assets/images/investigation-17.png"
   },
   {
-    "id": 19,
-    "title": "Coastal Cantilever I",
-    "category": "dwellings",
-    "image": "assets/images/investigation-19.png",
-    "description": "A low modernist dwelling projects from a rocky coastal slope toward open water and distant mountains. A butterfly roof and transparent living spaces frame the landscape.",
-    "poem": "The roof opens to distance;\nglass receives the sea.\nThe house touches stone lightly."
+    "title": "Highway Sanctuary II",
+    "description": "A second frontal study sharpens the sanctuary into a monumental gateway. The central void aligns with the roadway, turning passage beneath the structure into a collective threshold.",
+    "fragment": "The road passes through a question made monumental.",
+    "src": "assets/images/investigation-18.png"
   },
   {
-    "id": 20,
-    "title": "Coastal Cantilever II",
-    "category": "dwellings",
-    "image": "assets/images/investigation-20.png",
-    "description": "A second coastal dwelling rests above a rocky shoreline with broad glazing and a deep cantilevered roof. The house is conceived as a quiet observation platform between forest, mountain, and water.",
-    "poem": "The cliff carries the room;\nthe horizon enters glass.\nStillness faces the sea."
+    "title": "Forest Pavilion",
+    "description": "A low glass dwelling rests lightly within a wooded landscape. Broad roof planes, slender supports, and transparent walls allow domestic life to remain visually continuous with the surrounding terrain.",
+    "fragment": "Shelter becomes quiet enough to hear the forest.",
+    "src": "assets/images/investigation-19.png"
   },
   {
-    "id": 21,
+    "title": "Waterside Canopy House",
+    "description": "A delicate pavilion extends toward the water beneath a sweeping roof. Its open perimeter and reflected setting turn the dwelling into a measured interval between land, sky, and lake.",
+    "fragment": "The roof gathers the horizon without enclosing it.",
+    "src": "assets/images/investigation-20.png"
+  },
+  {
     "title": "Sinuous Mobility Landscape",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-21.png",
-    "description": "Elevated roads, rail lines, pedestrian routes, and wind turbines curve through a lush coastal territory toward a distant city. Infrastructure is absorbed into landscape.",
-    "poem": "The road curves with the land;\nthe turbines mark the wind.\nMovement becomes geography."
+    "description": "A vast aerial infrastructure winds through a dense urban field, combining roads, transit paths, landscape, and branching connections in one continuous system.",
+    "fragment": "Movement draws a new geography across the city.",
+    "src": "assets/images/investigation-21.png"
   },
   {
-    "id": 22,
-    "title": "Metropolitan Delta",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-22.png",
-    "description": "Branching elevated routes extend from a dense waterfront city into an archipelago of vegetation, water, and wind infrastructure. Mobility is distributed like a delta.",
-    "poem": "Routes divide like rivers;\nthe city flows outward.\nInfrastructure becomes terrain."
+    "title": "Branching Metropolitan Network",
+    "description": "A second aerial proposal intensifies the branching system into a broad territorial organism. Multiple routes divide and reunite, producing mobility as both infrastructure and landscape.",
+    "fragment": "The network grows like a river taught to inhabit.",
+    "src": "assets/images/investigation-22.png"
   },
   {
-    "id": 23,
     "title": "Cliff House",
-    "category": "dwellings",
-    "image": "assets/images/investigation-23.png",
-    "description": "A glass dwelling is embedded into a steep forested cliff above a broad body of water. Its cantilever frames distant mountains while a small aircraft emphasizes the isolation of the site.",
-    "poem": "The cliff holds the room;\nthe horizon enters glass.\nDistance becomes domestic."
+    "description": "A horizontal dwelling projects from a steep mountain edge, balancing sheltered rooms against a vast open landscape. Timber, stone, and glass establish a precise line between refuge and exposure.",
+    "fragment": "The house holds the cliff while the horizon remains free.",
+    "src": "assets/images/investigation-23.png"
   },
   {
-    "id": 24,
-    "title": "Waterfall Cantilever",
-    "category": "dwellings",
-    "image": "assets/images/investigation-24.png",
-    "description": "A modernist house projects from a vertical rock face beside a monumental waterfall. Transparent rooms and long cantilevers place domestic life between stone, mist, and gravity.",
-    "poem": "The cliff holds the dwelling;\nthe water carries time.\nHome hangs beside the fall."
+    "title": "Waterfall Dwelling",
+    "description": "A circular glass residence is suspended beside a powerful waterfall. The dwelling treats mist, height, and moving water as immediate architectural materials rather than distant scenery.",
+    "fragment": "To dwell here is to inhabit the falling of water.",
+    "src": "assets/images/investigation-24.png"
   },
   {
-    "id": 25,
     "title": "Vertical Waterfall Habitat",
-    "category": "dwellings",
-    "image": "assets/images/investigation-25.png",
-    "description": "A multi-level dwelling climbs a sheer cliff beside a waterfall, connected by a transparent external elevator. Vertical circulation becomes the central experience of habitation.",
-    "poem": "The elevator rises;\nthe waterfall descends.\nLife unfolds between two currents."
+    "description": "A tall sectional habitat occupies the rock beside a narrow waterfall. Stacked chambers and circulation spaces create a vertical domestic world embedded within the cliff.",
+    "fragment": "The dwelling descends through stone as water descends through air.",
+    "src": "assets/images/investigation-25.png"
   },
   {
-    "id": 26,
-    "title": "Launch Cathedral",
-    "category": "speculations",
-    "image": "assets/images/investigation-26.png",
-    "description": "Twin monumental service towers frame a rocket at the center of a vast launch complex. Sweeping structural shells and bridges give technological departure the scale of civic ritual.",
-    "poem": "Two towers hold the sky;\na rocket waits between them.\nDeparture becomes ceremony."
+    "title": "Earthbound Launch Cathedral",
+    "description": "A symmetrical launch structure rises like a technological cathedral, with sweeping supports converging around a central vertical vehicle. Monumentality is produced through the union of propulsion and structure.",
+    "fragment": "The machine prepares a vertical passage through the sky.",
+    "src": "assets/images/investigation-26.png"
   },
   {
-    "id": 27,
-    "title": "Suspended Launch Tower",
-    "category": "speculations",
-    "image": "assets/images/investigation-27.png",
-    "description": "A rocket is held beside a single curving service tower by elevated access bridges. Gantry, workplace, circulation, and monument merge into one vertical machine.",
-    "poem": "The tower leans toward flight;\nthe rocket waits in suspension.\nStructure prepares departure."
+    "title": "Orbital Gantry",
+    "description": "A slender rocket is held beside an asymmetrical launch tower whose curved supports and service armatures frame the moment before release.",
+    "fragment": "Support approaches the vehicle only to let it go.",
+    "src": "assets/images/investigation-27.png"
   },
   {
-    "id": 28,
-    "title": "Launch Oculus",
-    "category": "speculations",
-    "image": "assets/images/investigation-28.png",
-    "description": "From within an immense inhabited launch structure, a circular opening frames the rocket and service tower beyond. Galleries and stairs make departure a shared public spectacle.",
-    "poem": "A circle opens to distance;\na figure faces the machine.\nThe horizon is framed."
+    "title": "Interior Launch Portal",
+    "description": "Viewed from within a monumental arched chamber, the launch vehicle appears beyond layered structural rings. The interior turns departure into a distant, carefully framed event.",
+    "fragment": "The portal makes elsewhere visible before it is reached.",
+    "src": "assets/images/investigation-28.png"
   },
   {
-    "id": 29,
-    "title": "Integrated Launch Monument",
-    "category": "speculations",
-    "image": "assets/images/investigation-29.png",
-    "description": "A central rocket is enclosed by paired sweeping towers. Technical service systems, vertical circulation, and symbolic form are fused into one architectural body.",
-    "poem": "Tower and rocket meet;\nservice becomes silhouette.\nThe machine gains a civic face."
+    "title": "Vertical Departure Monument",
+    "description": "A compact launch tower gathers ramps, supports, and service spaces into a singular upward figure. The base widens to the ground while the central void remains dedicated to ascent.",
+    "fragment": "Every line leans toward departure.",
+    "src": "assets/images/investigation-29.png"
   },
   {
-    "id": 30,
-    "title": "Rocket Sanctuary",
-    "category": "speculations",
-    "image": "assets/images/investigation-30.png",
-    "description": "A closer frontal study integrates the rocket into a monumental launch structure whose curved shells rise around the vehicle.",
-    "poem": "Curved walls gather;\nthe rocket occupies the void.\nThe building prepares ascent."
+    "title": "Launch Spire",
+    "description": "A tall, tapered structure encloses the machinery of access and release within a sharply vertical silhouette. The tower is conceived as both infrastructure and civic monument.",
+    "fragment": "Height becomes an instrument pointed beyond itself.",
+    "src": "assets/images/investigation-30.png"
   },
   {
-    "id": 31,
-    "title": "Launch Forum",
-    "category": "speculations",
-    "image": "assets/images/investigation-31.png",
-    "description": "A photoreal interior gallery looks through an immense circular structural opening toward a rocket lifting into the evening sky. Launch becomes a collective spatial event.",
-    "poem": "Fire enters the sky;\narchitecture holds the witness.\nThe void becomes a lens."
+    "title": "Tower Morphologies",
+    "description": "A family of launch towers and vertical portals tests multiple relationships between base, shaft, support arm, and central void. The sheet presents evolution through formal variation.",
+    "fragment": "One ambition assumes many possible bodies.",
+    "src": "assets/images/investigation-31.png"
   },
   {
-    "id": 32,
-    "title": "Vertical City Studies",
-    "category": "speculations",
-    "image": "assets/images/investigation-32.png",
-    "description": "Eight tower studies compare stacked, curved, split, exposed, and tapering structural systems. The skyscraper is treated as an evolving family of propositions.",
-    "poem": "Eight towers rise,\neach answering gravity differently.\nHeight becomes inquiry."
+    "title": "Circular Airport Garden",
+    "description": "A ring-shaped terminal surrounds a dense central landscape. Aircraft circulation, planted courtyards, water, and architecture are organized as one continuous ecological and transportation system.",
+    "fragment": "Arrival circles a garden before meeting the city.",
+    "src": "assets/images/investigation-32.png"
   },
   {
-    "id": 33,
-    "title": "Orbital Garden Airport",
-    "category": "terminals",
-    "image": "assets/images/investigation-33.png",
-    "description": "A circular airport terminal encloses a vast interior landscape organized around gardens, pools, and a central waterfall. Air travel is structured around a civic ecosystem.",
-    "poem": "Aircraft circle the garden;\nwater falls at the center.\nDeparture begins in landscape."
+    "title": "Waterfall Terminal Hall",
+    "description": "A vast interior garden is organized around a central waterfall descending from a luminous roof opening. Terraced circulation and planted balconies turn the airport into an inhabited climate.",
+    "fragment": "The journey begins beneath falling light and water.",
+    "src": "assets/images/investigation-33.png"
   },
   {
-    "id": 34,
-    "title": "Garden Atrium",
-    "category": "terminals",
-    "image": "assets/images/investigation-34.png",
-    "description": "A luminous airport atrium combines a central waterfall, mature trees, planted terraces, water gardens, passengers, and robotic assistance.",
-    "poem": "The traveler enters a forest;\nthe machine offers guidance.\nNature becomes orientation."
+    "title": "Aerotropolis Park",
+    "description": "A low, continuous airport complex forms sweeping rings around gardens, waterways, and public landscapes. The terminal is treated as a park crossed by movement rather than a sealed transportation box.",
+    "fragment": "The terminal spreads until infrastructure becomes landscape.",
+    "src": "assets/images/investigation-34.png"
   },
   {
-    "id": 35,
-    "title": "Sky Garden Airport",
-    "category": "terminals",
-    "image": "assets/images/investigation-35.png",
-    "description": "A sweeping glass terminal wraps a central garden court beneath a fluid roof. The airport becomes a climatic envelope around landscape, water, and public life.",
-    "poem": "The roof gathers light;\nthe garden gathers people.\nFlight begins beneath a transparent sky."
-  },
-  {
-    "id": 36,
     "title": "Lotus Concourse",
-    "category": "terminals",
-    "image": "assets/images/investigation-36.png",
-    "description": "A broad indoor water garden filled with lotus flowers organizes circulation through a luminous airport concourse. Tree-like columns and daylight turn transit into a calm public interior.",
-    "poem": "Lilies mark the water;\npaths bend around reflection.\nThe terminal slows time."
+    "description": "A luminous concourse unfolds beneath petal-like roof vaults and around pools filled with vegetation. Travelers move through a humid civic garden shaped by filtered daylight.",
+    "fragment": "Transit pauses among leaves, water, and reflected sky.",
+    "src": "assets/images/investigation-35.png"
   },
   {
-    "id": 37,
-    "title": "Orbital Launch Hall",
-    "category": "speculations",
-    "image": "assets/images/investigation-37.png",
-    "description": "A rocket lifts off beyond the circular opening of an immense inhabited launch hall at sunset. Layered galleries and service structures frame the event.",
-    "poem": "Fire enters the sky;\narchitecture holds the witness.\nDeparture becomes spectacle."
+    "title": "Launch Observation Hall",
+    "description": "A circular industrial interior frames a rocket and sunset beyond a vast mechanical opening. The architecture makes propulsion visible as a public and almost theatrical event.",
+    "fragment": "The horizon ignites inside the machine.",
+    "src": "assets/images/investigation-36.png"
   },
   {
-    "id": 38,
-    "title": "Launch Observatory",
-    "category": "speculations",
-    "image": "assets/images/investigation-38.png",
-    "description": "An interior observatory looks toward a rocket positioned between immense service towers. A solitary figure establishes human scale within the monumental machine.",
-    "poem": "One figure faces the rocket;\none room faces the horizon.\nScale becomes visible."
+    "title": "Vertical Service Chamber",
+    "description": "A narrow interior rises through multiple maintenance levels beside a launch vehicle. Dense structure, platforms, and shafts reveal the hidden vertical labor required before flight.",
+    "fragment": "Ascent is prepared within a canyon of work.",
+    "src": "assets/images/investigation-37.png"
   },
   {
-    "id": 39,
     "title": "Ocean Harbor Cruiseport",
-    "category": "terminals",
-    "image": "assets/images/investigation-39.png",
-    "description": "A fluid, ray-like roof shelters a large waterfront cruise terminal beside a berthed ship. Maritime arrival becomes a civic event shaped by water, shade, and movement.",
-    "poem": "The roof follows the sea;\nthe ship meets the city.\nArrival becomes shoreline."
+    "description": "A sweeping white terminal occupies the waterfront as a continuous low landscape of shells, skylights, and planted roof surfaces. The city skyline remains visible beyond the harbor.",
+    "fragment": "The terminal receives the sea with an open horizon.",
+    "src": "assets/images/investigation-38.png"
   },
   {
-    "id": 40,
-    "title": "Dolphin Arrival Hall",
-    "category": "terminals",
-    "image": "assets/images/investigation-40.png",
-    "description": "A luminous cruiseport lobby frames the harbor and ship through a monumental glass wall. A dolphin fountain anchors the public interior.",
-    "poem": "Dolphins rise through water;\nthe ship waits beyond glass.\nArrival enters as reflection."
+    "title": "Dolphin Hall",
+    "description": "A monumental glazed interior curves around a central dolphin fountain and indoor landscape. The terminal combines maritime imagery, daylight, and civic scale in a ceremonial arrival space.",
+    "fragment": "Water remembers the creatures that taught movement grace.",
+    "src": "assets/images/investigation-39.png"
   },
   {
-    "id": 41,
-    "title": "Harbor Crown",
-    "category": "terminals",
-    "image": "assets/images/investigation-41.png",
-    "description": "A domed waterfront terminal presents a ceremonial front to the harbor at sunset. Its patterned roof and curved glass facade establish a maritime landmark.",
-    "poem": "The harbor reflects the crown;\nlight gathers at the entrance.\nA terminal becomes monument."
+    "title": "Harbor Wing",
+    "description": "A sharply cantilevered terminal wing extends over the waterfront. Its perforated white surface and tapering structure give the building the poised character of a marine body about to move.",
+    "fragment": "The roof approaches the water as if learning to swim.",
+    "src": "assets/images/investigation-40.png"
   },
   {
-    "id": 42,
+    "title": "Civic Harbor Vessel",
+    "description": "A rounded terminal rises above the waterfront like a luminous vessel. Layered glazing and a broad metallic crown turn the building into a public landmark between city and sea.",
+    "fragment": "At dusk, the harbor receives a vessel that does not depart.",
+    "src": "assets/images/investigation-41.png"
+  },
+  {
     "title": "Cruiseport Elevations",
-    "category": "terminals",
-    "image": "assets/images/investigation-42.png",
-    "description": "Two long waterfront elevations study the cruiseport's fluid roofline, broad spans, central skylight, and continuous relationship to the sea.",
-    "poem": "Two horizons face the water;\none body turns with the shore.\nThe roof keeps its course."
+    "description": "Paired waterfront elevations examine the terminal as a family of low, continuous shell forms. Repetition and variation produce a recognizable maritime identity across the complex.",
+    "fragment": "One shoreline is composed through several related horizons.",
+    "src": "assets/images/investigation-42.png"
   },
   {
-    "id": 43,
     "title": "Harbor Atrium",
-    "category": "terminals",
-    "image": "assets/images/investigation-43.png",
-    "description": "A multi-level cruiseport atrium frames the sea and an arriving ship through a monumental glazed opening. Bridges, terraces, gardens, retail, and robotic assistance form a layered civic interior.",
-    "poem": "The ship appears beyond glass;\nbridges cross the light.\nThe hall becomes a city."
+    "description": "A tall internal atrium layers balconies, bridges, planted terraces, and gathering spaces beneath a luminous roof. The terminal becomes a vertical civic room rather than a simple passage.",
+    "fragment": "Arrival expands upward into public life.",
+    "src": "assets/images/investigation-43.png"
   },
   {
-    "id": 44,
-    "title": "Ocean Concourse",
-    "category": "terminals",
-    "image": "assets/images/investigation-44.png",
-    "description": "A curving interior concourse opens toward the harbor through a vast glass wall. Warm light, planted terraces, bridges, and balconies organize movement around the view.",
-    "poem": "The sea enters the room;\nthe concourse bends toward it.\nMovement follows the ship."
+    "title": "Maritime Concourse",
+    "description": "Curving walkways and layered public levels move through a warm, daylit terminal interior. The space combines circulation, waiting, commerce, and views toward the harbor within one continuous promenade.",
+    "fragment": "The concourse carries the city gently toward the sea.",
+    "src": "assets/images/investigation-44.png"
   },
   {
-    "id": 45,
-    "title": "Harbor Pavilion",
-    "category": "terminals",
-    "image": "assets/images/investigation-45.png",
-    "description": "A low domed cruise terminal sits between harbor water and a dense skyline while a cruise ship berths nearby. Its patterned roof forms a continuous civic canopy.",
-    "poem": "A low roof meets the bay;\nthe skyline rises behind it.\nThe terminal rests between city and sea."
+    "title": "Island Cruise Terminal",
+    "description": "A low oval terminal occupies an island-like waterfront platform with the skyline beyond. The building merges planted roof, marina edge, and metropolitan arrival into a singular harbor landscape.",
+    "fragment": "Between water and skyline, arrival becomes an island.",
+    "src": "assets/images/investigation-45.png"
   },
   {
-    "id": 46,
-    "title": "Benthic Dwelling",
-    "category": "dwellings",
-    "image": "assets/images/investigation-46.png",
-    "description": "A transparent residential vessel rests directly on the ocean floor, combining domestic comfort with the machinery of underwater survival. Divers and a small submersible establish its marine context.",
-    "poem": "A house descends below light;\nfish become neighbors.\nDomestic space enters the sea."
+    "title": "Abyssal Habitat I",
+    "description": "A pressurized underwater dwelling rests on the ocean floor beneath a narrow cone of filtered light. Its illuminated interior contrasts with the darkness and pressure of the surrounding sea.",
+    "fragment": "A small light holds its ground beneath the ocean.",
+    "src": "assets/images/investigation-46.png"
   },
   {
-    "id": 47,
-    "title": "Walking Ocean Habitat I",
-    "category": "dwellings",
-    "image": "assets/images/investigation-47.png",
-    "description": "The underwater dwelling gains four articulated mechanical legs, allowing it to traverse the seabed while preserving a familiar domestic interior.",
-    "poem": "The house lifts one foot;\nthe seabed receives another.\nHabitation learns to move."
+    "title": "Abyssal Habitat II",
+    "description": "A longer modular habitat settles into a rocky seabed, combining transparent living chambers with a robust external shell. The structure suggests domestic continuity in an environment without horizon.",
+    "fragment": "Where the horizon disappears, habitation becomes its own world.",
+    "src": "assets/images/investigation-47.png"
   },
   {
-    "id": 48,
-    "title": "Walking Ocean Habitat II",
-    "category": "dwellings",
-    "image": "assets/images/investigation-48.png",
-    "description": "A four-legged marine habitat advances across a dark ocean floor while divers and a submersible observe it. Its illuminated interior preserves a warm domestic world within an alien environment.",
-    "poem": "Warm rooms cross cold water;\nmetal feet disturb the silt.\nHome moves through the unknown."
+    "title": "Walking Ocean Habitat",
+    "description": "An inhabited vessel stands above the seabed on articulated mechanical legs. It is conceived not as a submarine but as a slow mobile dwelling capable of stepping across the ocean floor.",
+    "fragment": "The house walks where streets cannot exist.",
+    "src": "assets/images/investigation-48.png"
   },
   {
-    "id": 49,
     "title": "Abyssal Walker",
-    "category": "dwellings",
-    "image": "assets/images/investigation-49.png",
-    "description": "A six-legged underwater habitat moves across the seabed as a self-contained residence and exploration platform. Transparency makes domestic life visible within the machine.",
-    "poem": "The ocean holds the machine;\nthe machine holds the room.\nA window of light walks."
+    "description": "A second view emphasizes the habitat's illuminated interior, segmented hull, and four-legged stance within deep blue water. Mobility is deliberate, mechanical, and almost animal-like.",
+    "fragment": "In the deep, architecture learns the patience of a creature.",
+    "src": "assets/images/investigation-49.png"
   },
   {
-    "id": 50,
     "title": "Desert Cable City",
-    "category": "speculations",
-    "image": "assets/images/investigation-50.png",
-    "description": "A vast desert settlement is organized around inhabited towers, cable routes, canyon platforms, waterfalls, and shaded public grounds. Transportation becomes the armature linking separated communities.",
-    "poem": "Cables cross the canyon;\nwater gathers below.\nThe city is held together by air."
+    "description": "A vast desert settlement is linked by elevated cables, towers, and suspended routes. Vertical hubs concentrate movement while the ground remains a rugged field of habitation and infrastructure.",
+    "fragment": "Across the desert, distance is stitched through the air.",
+    "src": "assets/images/investigation-50.png"
   },
   {
-    "id": 51,
-    "title": "Desert Courtyard Dwelling",
-    "category": "dwellings",
-    "image": "assets/images/investigation-51.png",
-    "description": "A low earth-toned residence surrounds a pool and planted court within a desert landscape. Deep shade, water, planted roofs, and family life create an intimate refuge.",
-    "poem": "The desert keeps the heat;\nthe courtyard keeps the life.\nWater becomes shelter."
+    "title": "Desert Cooling Dwelling",
+    "description": "A low circular residence gathers beneath a broad shaded canopy in an arid valley. Deep overhangs, thermal mass, and a central vertical chimney suggest habitation driven by passive cooling.",
+    "fragment": "Shade becomes the first room of the desert.",
+    "src": "assets/images/investigation-51.png"
   },
   {
-    "id": 52,
-    "title": "Cliff Cable Network",
-    "category": "infrastructure",
-    "image": "assets/images/investigation-52.png",
-    "description": "A dense network of suspended cabins moves between steep mountain formations, inhabited plateaus, and distant settlements. The landscape is connected through lines in the air rather than roads on the ground.",
-    "poem": "The valley is crossed by threads;\nsmall rooms move through air.\nDistance becomes navigable."
+    "title": "Mountain Cable Network",
+    "description": "A settlement spreads through a dramatic mountain landscape using aerial routes, suspended platforms, and vertical access towers. The network connects terrain without forcing it into a conventional street grid.",
+    "fragment": "The path rises into the air so the mountain may remain.",
+    "src": "assets/images/investigation-52.png"
   },
   {
-    "id": 53,
     "title": "Earth Elevator Base",
-    "category": "speculations",
-    "image": "assets/images/investigation-53.png",
-    "description": "A colossal coastal tower supports a broad atmospheric platform while rockets rise from adjacent launch facilities. The base operates as port, vertical transport terminal, and planetary gateway.",
-    "poem": "The tower begins at water;\nthe platform gathers the sky.\nDeparture finds a harbor."
+    "description": "A monumental ocean platform supports the terrestrial base of an immense vertical elevator. Ships, service structures, and suspended machinery establish the project at the scale of planetary infrastructure.",
+    "fragment": "The first station of the sky is anchored in the sea.",
+    "src": "assets/images/investigation-53.png"
   },
   {
-    "id": 54,
-    "title": "Earth Elevator",
-    "category": "speculations",
-    "image": "assets/images/investigation-54.png",
-    "description": "A planetary-scale elevator rises from a coastal complex through the clouds to a vast inhabited platform at the edge of the atmosphere. Architecture becomes transport system, vertical city, and landmark of ascent.",
-    "poem": "The tower leaves the earth;\nthe platform meets the sky.\nArchitecture becomes ascent."
+    "title": "Atmospheric Elevator",
+    "description": "Seen from high above the mountains and cloud layer, the elevator continues beyond ordinary architectural scale. The structure links ground, atmosphere, and orbital possibility within one continuous vertical territory.",
+    "fragment": "Architecture becomes a line drawn from the planet toward elsewhere.",
+    "src": "assets/images/investigation-54.png"
   }
 ];
