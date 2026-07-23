@@ -1,3 +1,4 @@
+// SEGMENTS works.js corrected entries 29–40 — version 2026-07-22
 window.SEGMENTS_WORKS = [
   {
     "id": 1,
