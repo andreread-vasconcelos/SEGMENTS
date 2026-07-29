@@ -7,39 +7,6 @@
   <meta name="description" content="SEGMENTS — an architectural archive by Andre Vasconcelos.">
   <title>SEGMENTS — Andre Vasconcelos</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Leisure section: unobstructed image and plain editorial text. */
-    #leisure {
-      display: block;
-      color: var(--ink);
-      background: var(--paper);
-    }
-    #leisure .leisure-image {
-      margin: 0 0 64px;
-    }
-    #leisure .leisure-image img {
-      width: 100%;
-      height: auto;
-      max-height: none;
-      object-fit: contain;
-    }
-    #leisure .leisure-copy {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 8vw;
-    }
-    #leisure .essay {
-      max-width: 900px;
-      padding: 0;
-      background: transparent;
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-    }
-    @media (max-width: 900px) {
-      #leisure .leisure-image { margin-bottom: 40px; }
-      #leisure .leisure-copy { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -47,6 +14,7 @@
     <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
       <a href="#archive">Archive</a>
+      <a href="continuum.html">Continuum</a>
       <a href="#manifesto">Manifesto</a>
       <a href="#leisure">Leisure</a>
       <a href="#support">Support</a>
@@ -81,6 +49,18 @@
       <div id="gallery" class="gallery"></div>
     </section>
 
+    <section class="section continuum-entry" aria-labelledby="continuum-entry-title">
+      <div>
+        <p class="eyebrow">Archive II</p>
+        <h2 id="continuum-entry-title">CONTINUUM</h2>
+      </div>
+      <div class="continuum-entry-copy">
+        <p class="continuum-entry-thesis">Not every investigation concludes.<br><em>Some transpose.</em></p>
+        <p>An architectural essay on worldmaking, translation, artificial intelligence, infrastructure, civic life, and belief.</p>
+        <a class="continuum-enter" href="continuum.html">Enter Continuum →</a>
+      </div>
+    </section>
+
     <section id="manifesto" class="section manifesto">
       <p class="eyebrow">Manifesto</p>
       <p class="lead">SEGMENTS is conceived as an archive of investigations—an evolving body of work exploring infrastructure, landscape, mobility, and the philosophical dimensions of the built environment. Each work is a fragment of a larger inquiry into how architecture can respond to the realities of the present while revealing those yet to come.</p>
@@ -94,25 +74,20 @@
       <p class="closing-line">ARCHITECTURE IS THE PROJECT.</p>
     </section>
 
-    <section id="leisure" class="section" aria-labelledby="leisure-title">
-      <figure class="leisure-image">
-        <img src="assets/images/leisure-panorama.png" alt="Panoramic architectural image introducing the Leisure section">
-      </figure>
-      <div class="leisure-copy">
-        <div class="architect-heading">
-          <p class="eyebrow">Leisure</p>
-          <h2 id="leisure-title">LEISURE</h2>
-        </div>
-        <article class="essay">
-          <p>Andre is contemplative. In solitude, he studies the world and his surroundings with care. Observation has always preceded creation; long before architecture became a discipline, it was a way of understanding the world.</p>
-          <p>At seven, he received a drawing book as a belated birthday gift. He had hoped for toys. Reluctantly, he opened it.</p>
-          <p>One page changed everything.</p>
-          <p>It revealed the anatomy of a horse—its skeleton and musculature meticulously illustrated, as though its skin had vanished. The drawing revealed that imagination could coexist with knowledge, and that beauty could emerge from understanding.</p>
-          <p>On the back, his godfather had written two words: <strong>INSPIRATION × TRANSPIRATION</strong>.</p>
-          <p>Within a year, he had reproduced nearly every drawing the book contained. Drawing became a tool; imagination became the destination.</p>
-          <p><strong>SEGMENTS</strong> is the result of that journey—a body of work shaped by discipline, curiosity, and the persistent desire to imagine worlds that do not yet exist.</p>
-        </article>
+    <section id="leisure" class="section architect" aria-labelledby="leisure-title">
+      <div class="architect-heading">
+        <p class="eyebrow">Leisure</p>
+        <h2 id="leisure-title">LEISURE</h2>
       </div>
+      <article class="essay">
+        <p>Andre is contemplative. In solitude, he studies the world and his surroundings with care. Observation has always preceded creation; long before architecture became a discipline, it was a way of understanding the world.</p>
+        <p>At seven, he received a drawing book as a belated birthday gift. He had hoped for toys. Reluctantly, he opened it.</p>
+        <p>One page changed everything.</p>
+        <p>It revealed the anatomy of a horse—its skeleton and musculature meticulously illustrated, as though its skin had vanished. The drawing revealed that imagination could coexist with knowledge, and that beauty could emerge from understanding.</p>
+        <p>On the back, his godfather had written two words: <strong>INSPIRATION × TRANSPIRATION</strong>.</p>
+        <p>Within a year, he had reproduced nearly every drawing the book contained. Drawing became a tool; imagination became the destination.</p>
+        <p><strong>SEGMENTS</strong> is the result of that journey—a body of work shaped by discipline, curiosity, and the persistent desire to imagine worlds that do not yet exist.</p>
+      </article>
     </section>
 
     <section id="support" class="section support">
