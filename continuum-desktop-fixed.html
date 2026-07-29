@@ -27,7 +27,7 @@
     .site-nav{display:flex;gap:24px;align-items:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
     .site-nav a[aria-current="page"]{font-weight:700}
     .hero{min-height:88vh;display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.55fr);gap:clamp(36px,7vw,120px);align-items:center;padding:clamp(70px,10vw,150px) var(--pad)}
-    .hero h1{margin:0 0 18px;font-family:var(--serif);font-weight:400;font-size:clamp(3.4rem,7vw,7.4rem);letter-spacing:.02em}
+    .hero>div{min-width:0}.hero h1{margin:0 0 18px;font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,4.5vw,5.6rem);line-height:.95;letter-spacing:.01em;white-space:nowrap}
     .hero .thesis{font-family:var(--serif);font-size:clamp(1.3rem,2.2vw,2.05rem);line-height:1.28;margin:0 0 42px}
     .hero .thesis em{font-weight:400}
     .hero .intro{max-width:620px;color:#2e2c28}
@@ -65,9 +65,11 @@
     .close{top:16px;right:22px;font-size:2rem}
     .nav{top:50%;transform:translateY(-50%);font-size:2rem;padding:24px}
     .prev{left:8px}.next{right:8px}
+    @media(max-width:1100px){
+      .hero h1{font-size:clamp(3rem,10vw,5.6rem)}
+    }
     @media(max-width:900px){
       .site-nav{gap:12px;font-size:.62rem}.site-nav .optional{display:none}
-      .hero{grid-template-columns:1fr;min-height:auto;padding-top:80px}.hero-image{order:-1}.hero-image img{height:auto}
       .interlude{grid-template-columns:1fr}.viewer-stage{padding:62px 12px 100px}.nav{padding:12px}.viewer-caption{width:88vw}
       footer{flex-direction:column}
     }
