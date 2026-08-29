@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e7">
+  <meta name="description" content="CONTINUUM — an architectural essay on worldmaking by Andre Vasconcelos.">
+  <title>CONTINUUM — SEGMENTS</title>
+  <style>
+    :root {
+      --paper:#f4f0e7;
+      --ink:#161616;
+      --muted:#6d6a64;
+      --line:rgba(22,22,22,.18);
+      --pad:clamp(22px,4vw,72px);
+      --font:Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button{font:inherit}
+    .site-header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:18px var(--pad);background:rgba(244,240,231,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .brand{letter-spacing:.36em;font-size:.82rem;font-weight:700}
+    .site-nav{display:flex;gap:24px;align-items:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+    .site-nav a[aria-current="page"]{font-weight:700}
+    .hero{min-height:88vh;display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.55fr);gap:clamp(36px,7vw,120px);align-items:center;padding:clamp(70px,10vw,150px) var(--pad)}
+    .hero>div{min-width:0}.hero h1{margin:0 0 18px;font-family:var(--font);font-weight:400;font-size:clamp(3.2rem,4.5vw,5.6rem);line-height:.95;letter-spacing:.01em;white-space:nowrap}
+    .hero .thesis{font-family:var(--font);font-size:clamp(1.3rem,2.2vw,2.05rem);line-height:1.28;margin:0 0 42px}
+    .hero .thesis em{font-weight:400}
+    .hero .intro{max-width:620px;color:#2e2c28}
+    .hero-image,.essay-image{margin:0;overflow:hidden;background:#ddd7cc;cursor:zoom-in}
+    .hero-image img{width:100%;height:min(70vh,780px);object-fit:cover;transition:transform .45s ease}
+    .hero-image:hover img,.essay-image:hover img{transform:scale(1.012)}
+    .down{display:inline-block;margin-top:30px;font-size:1.2rem}
+    .text-block{max-width:920px;margin:0 auto;padding:clamp(90px,12vw,180px) var(--pad);text-align:center}
+    .eyebrow{margin:0 0 26px;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+    .text-block h2{font-family:var(--font);font-size:clamp(2rem,4vw,4.3rem);font-weight:400;margin:0 0 38px}
+    .text-block p{font-family:var(--font);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.7;margin:0 0 26px}
+    .text-block .source{font-family:var(--font);font-size:.82rem;line-height:1.6;color:var(--muted);margin-top:36px}
+    .stream{padding:0 var(--pad)}
+    .essay-image{margin:0 0 14px}
+    .essay-image img{width:100%;height:auto;transition:transform .45s ease}
+    .caption{max-width:920px;margin:0 auto;padding:18px 0 clamp(90px,11vw,170px);text-align:center}
+    .caption strong{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:7px}
+    .caption span{font-family:var(--font);color:#4d4943}
+    .interlude{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,8vw,130px);padding:clamp(90px,12vw,190px) var(--pad);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .interlude h2{font-family:var(--font);font-weight:400;font-size:clamp(2.4rem,5vw,5.7rem);margin:0}
+    .interlude p{font-family:var(--font);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.75;margin:0}
+    .epilogue{max-width:1000px;margin:0 auto;padding:clamp(100px,14vw,220px) var(--pad);text-align:center}
+    .epilogue h2{font-family:var(--font);font-size:clamp(2.5rem,5vw,5.5rem);font-weight:400;margin:0 0 42px}
+    .epilogue p{font-family:var(--font);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.75;margin:0 0 25px}
+    .ending{padding:90px var(--pad) 120px;text-align:center;border-top:1px solid var(--line)}
+    .ending h2{font-family:var(--font);font-size:clamp(2.4rem,6vw,6rem);font-weight:400;margin:0 0 18px}
+    .ending p{font-family:var(--font);font-size:clamp(1.2rem,2vw,1.8rem);margin:0 0 70px}
+    footer{display:flex;justify-content:space-between;gap:20px;padding:24px var(--pad);border-top:1px solid var(--line);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+    .viewer{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:rgba(9,9,9,.98);color:white;overflow:hidden}
+    .viewer::backdrop{background:#090909}
+    .viewer-stage{width:100%;height:100%;margin:0;display:grid;place-items:center;padding:58px 72px 92px}
+    .viewer-stage img{max-width:100%;max-height:100%;object-fit:contain}
+    .viewer-caption{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);width:min(760px,70vw);text-align:center;font-size:.78rem;color:rgba(255,255,255,.72)}
+    .viewer button{position:absolute;z-index:3;border:0;background:transparent;color:white;cursor:pointer}
+    .close{top:16px;right:22px;font-size:2rem}
+    .nav{top:50%;transform:translateY(-50%);font-size:2rem;padding:24px}
+    .prev{left:8px}.next{right:8px}
+    @media(max-width:1100px){
+      .hero h1{font-size:clamp(3rem,10vw,5.6rem)}
+    }
+    @media(max-width:900px){
+      .site-nav{gap:12px;font-size:.62rem}.site-nav .optional{display:none}
+      .interlude{grid-template-columns:1fr}.viewer-stage{padding:62px 12px 100px}.nav{padding:12px}.viewer-caption{width:88vw}
+      footer{flex-direction:column}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-image img,.essay-image img{transition:none}}
+  </style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <a class="brand" href="index.html">SEGMENTS</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#archive">Investigations</a>
+      <a href="continuum.html" aria-current="page">Continuum</a>
+      <a class="optional" href="index.html#leisure">Leisure</a>
+      <a class="optional" href="index.html#support">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="continuum-title">
+      <div>
+        <p class="eyebrow">Archive II</p>
+        <h1 id="continuum-title">CONTINUUM</h1>
+        <p class="thesis">Not every investigation concludes.<br><em>Some transpose.</em></p>
+        <p class="intro">Continuum gathers investigations that remain deliberately open. Rather than seeking definitive conclusions, these works explore how architecture shifts between representation, infrastructure, landscape, and possible realities. Drawings, models, and speculative propositions become instruments through which alternative worlds can be imagined and tested.</p>
+        <a class="down" href="#worldmaking" aria-label="Continue to Worldmaking">↓</a>
+      </div>
+      <figure class="hero-image" data-index="7" tabindex="0" aria-label="Open image fullscreen">
+        <img src="assets/images/continuum-08.png" alt="A speculative metropolis combining elevated promenades, water gardens, temples, rail infrastructure, and a distant skyline at sunset">
+      </figure>
+    </section>
+
+    <section id="worldmaking" class="text-block">
+      <p class="eyebrow">Worldmaking</p>
+      <h2>Architecture as a version of reality.</h2>
+      <p>Continuum is informed by philosopher <strong>Nelson Goodman</strong>, whose <em>Ways of Worldmaking</em> proposes that worlds are not simply discovered but constructed through systems of symbols, descriptions, classifications, and representations.</p>
+      <p>Architecture participates in this process. Every drawing selects, omits, orders, weights, supplements, and transforms relationships. Infrastructure becomes landscape; landscape becomes architecture; transportation becomes civic space. A project is therefore not a copy of a predetermined world, but a proposition for another coherent version of it.</p>
+      <p class="source">Conceptual source: Nelson Goodman, <em>Ways of Worldmaking</em> (1978), especially Chapter I, “Words, Works, Worlds,” and its discussion of composition and decomposition, weighting, ordering, deletion and supplementation, and deformation.</p>
+    </section>
+
+    <section class="stream" aria-label="Continuum image sequence">
+      <figure class="essay-image" data-index="0" tabindex="0"><img loading="lazy" src="assets/images/continuum-01.png" alt="Futuristic high-speed rail crossing a dense vertical city above a civic plaza"></figure>
+      <p class="caption"><strong>Infrastructure as continuous habitat.</strong><span>Mobility and dwelling become indistinguishable when the city is conceived as layered sections.</span></p>
+
+      <figure class="essay-image" data-index="1" tabindex="0"><img loading="lazy" src="assets/images/continuum-02.png" alt="A public concourse beneath elevated rail and layered infrastructure with drones and a central red tree"></figure>
+      <p class="caption"><strong>Composition and decomposition.</strong><span>The city is disassembled into movement, structure, landscape, commerce, and public life—then composed again.</span></p>
+
+      <figure class="essay-image" data-index="2" tabindex="0"><img loading="lazy" src="assets/images/continuum-03.png" alt="A layered transit hub with trains, water, gardens, bicycles, and public terraces"></figure>
+      <p class="caption"><strong>Civic systems are architectural material.</strong><span>Transportation, recreation, ecology, and daily ritual occupy the same spatial order.</span></p>
+
+      <figure class="essay-image" data-index="3" tabindex="0"><img loading="lazy" src="assets/images/continuum-04.png" alt="A vast glass-covered urban atrium combining trains, cycling paths, gardens, terraces, and waterfalls"></figure>
+      <p class="caption"><strong>Order does not require separation.</strong><span>Coherence can emerge through overlap, adjacency, and the productive friction of many systems.</span></p>
+    </section>
+
+    <section class="interlude">
+      <h2>Translation<br>through agility.</h2>
+      <p>Artificial intelligence functions here as a speculative medium. It expands the architect’s capacity for translation, juxtaposition, synthesis, and iteration. Ideas separated by geography, history, culture, technology, material, and scale can be recombined with remarkable <strong>agility</strong>, allowing previously disconnected architectural propositions to be explored as coherent world versions.</p>
+    </section>
+
+    <section class="stream">
+      <figure class="essay-image" data-index="4" tabindex="0"><img loading="lazy" src="assets/images/continuum-05.png" alt="A monumental illuminated civic terminal surrounded by gardens and a nighttime skyline"></figure>
+      <p class="caption"><strong>Infrastructure becomes ceremony.</strong><span>The terminal is no longer a threshold passed through, but a civic room in which movement is publicly celebrated.</span></p>
+
+      <figure class="essay-image" data-index="5" tabindex="0"><img loading="lazy" src="assets/images/continuum-06.png" alt="A waterfront terminal at sunset connecting harbor mobility, public gardens, cycling, and urban life"></figure>
+      <p class="caption"><strong>The sea becomes geography and possibility.</strong><span>Land, water, air, and public life meet through one architectural interface.</span></p>
+
+      <figure class="essay-image" data-index="6" tabindex="0"><img loading="lazy" src="assets/images/continuum-07.png" alt="A circular harbor terminal with a luminous roof, gardens, water taxis, and crowds at sunset"></figure>
+      <p class="caption"><strong>Worlds acquire internal logic.</strong><span>Even unfamiliar forms become believable when movement, structure, and inhabitation belong to the same order.</span></p>
+
+      <figure class="essay-image" data-index="8" tabindex="0"><img loading="lazy" src="assets/images/continuum-09.png" alt="A contemplative interior overlooking a futuristic coastal metropolis, temples, elevated roads, and rail at sunset"></figure>
+      <p class="caption"><strong>A world is also a point of view.</strong><span>Each frame selects what is near, what is distant, what is remembered, and what is allowed to become visible.</span></p>
+
+      <figure class="essay-image" data-index="9" tabindex="0"><img loading="lazy" src="assets/images/continuum-10.png" alt="A monumental sacred library where people and robots study and meditate beneath suspended divine figures and red glass"></figure>
+    </section>
+
+    <section class="epilogue">
+      <p class="eyebrow">Epilogue</p>
+      <h2>Every world is sustained by more than infrastructure.</h2>
+      <p>It is sustained by belief.</p>
+      <p>The propositions assembled throughout Continuum investigate transportation, ecology, public space, and architecture as interconnected systems. Yet every constructed world also requires a symbolic order—its institutions, rituals, myths, and places of contemplation.</p>
+      <p>Following Goodman’s understanding that worlds are made through systems of representation, this final investigation turns toward architecture’s oldest question: not only how we build, but what we choose to believe, remember, celebrate, and preserve.</p>
+      <p>Ancient cosmologies encounter autonomous technologies. Libraries become sanctuaries. Robots become participants rather than instruments. Sacred space becomes civic space. These propositions do not claim to predict the future. Together, they invite reflection on how architecture might continue to construct new worlds.</p>
+    </section>
+
+    <section class="ending">
+      <h2>CONTINUUM</h2>
+      <p>The investigation remains unfinished.</p>
+      <a href="index.html">Return to SEGMENTS →</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>Continuum — Andre Vasconcelos</span>
+    <a href="#top">Top ↑</a>
+  </footer>
+
+  <dialog id="viewer" class="viewer" aria-label="Fullscreen image viewer">
+    <button class="close" id="close" aria-label="Close viewer">×</button>
+    <button class="nav prev" id="prev" aria-label="Previous image">←</button>
+    <figure class="viewer-stage">
+      <img id="viewer-image" alt="">
+      <figcaption class="viewer-caption" id="viewer-caption"></figcaption>
+    </figure>
+    <button class="nav next" id="next" aria-label="Next image">→</button>
+  </dialog>
+
+  <script>
+    const images = [
+      ['assets/images/continuum-01.png','Infrastructure as continuous habitat.'],
+      ['assets/images/continuum-02.png','Composition and decomposition.'],
+      ['assets/images/continuum-03.png','Civic systems are architectural material.'],
+      ['assets/images/continuum-04.png','Order does not require separation.'],
+      ['assets/images/continuum-05.png','Infrastructure becomes ceremony.'],
+      ['assets/images/continuum-06.png','The sea becomes geography and possibility.'],
+      ['assets/images/continuum-07.png','Worlds acquire internal logic.'],
+      ['assets/images/continuum-08.png','Architecture as a version of reality.'],
+      ['assets/images/continuum-09.png','A world is also a point of view.'],
+      ['assets/images/continuum-10.png','Every world is sustained by more than infrastructure.']
+    ];
+    const viewer = document.getElementById('viewer');
+    const viewerImage = document.getElementById('viewer-image');
+    const viewerCaption = document.getElementById('viewer-caption');
+    let current = 0;
+    function show(index){
+      current = (index + images.length) % images.length;
+      viewerImage.src = images[current][0];
+      viewerImage.alt = images[current][1];
+      viewerCaption.textContent = `${String(current + 1).padStart(2,'0')} / ${String(images.length).padStart(2,'0')} — ${images[current][1]}`;
+      if(!viewer.open) viewer.showModal();
+    }
+    document.querySelectorAll('[data-index]').forEach(el=>{
+      el.addEventListener('click',()=>show(Number(el.dataset.index)));
+      el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show(Number(el.dataset.index));}});
+    });
+    document.getElementById('close').addEventListener('click',()=>viewer.close());
+    document.getElementById('prev').addEventListener('click',()=>show(current-1));
+    document.getElementById('next').addEventListener('click',()=>show(current+1));
+    viewer.addEventListener('click',e=>{if(e.target===viewer) viewer.close();});
+    document.addEventListener('keydown',e=>{
+      if(!viewer.open) return;
+      if(e.key==='ArrowLeft') show(current-1);
+      if(e.key==='ArrowRight') show(current+1);
+    });
+  </script>
+</body>
+</html>
